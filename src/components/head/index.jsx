@@ -54,6 +54,10 @@ export function Head({ description, lang, meta, keywords, title }) {
                 name: `google-site-verification`,
                 content: `LibCl4A-AzSqdeI10qV0PGBE46wCpoPs1fZNTXlrtF8`,
               },
+              {
+                name: `naver-site-verification`,
+                content: `c066ae70fd519b13c785edb7589d32d19a954314`,
+              },
             ]
               .concat(
                 keywords.length > 0
