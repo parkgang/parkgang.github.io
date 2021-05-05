@@ -6,6 +6,12 @@ github action으로 자동화 배포라인이 설정되어 있습니다. `gh-pag
 
 > master branch 기준으로 블로그가 운영 중 입니다.
 
+# 수동 배포 방법
+
+```shell
+npm run deploy
+```
+
 # local에서 확인 방법
 
 ```shell
