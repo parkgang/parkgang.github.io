@@ -1,8 +1,8 @@
 module.exports = {
-  title: `Bee starter`,
-  description: `Blog posted about ...`,
+  title: `Parkgang Dev Log`,
+  description: `Parkgang의 개발 블로그 입니다.`,
   author: `parkgang`,
-  introduction: `I explain with words and code. I explain with words and code. I explain with words and code.`,
+  introduction: `Software Engineer, 시스템 적인 환경을 좋아하는 개발자`,
   siteUrl: `https://parkgang.github.io/`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
@@ -22,7 +22,7 @@ module.exports = {
     countOfInitialPost: 10, // Config your initial count of post
   },
   sponsor: {
-    buyMeACoffeeId: 'jbee',
+    buyMeACoffeeId: 'parkgang',
   },
   share: {
     facebookAppId: '', // Add facebookAppId for using facebook share feature v3.2
