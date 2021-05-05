@@ -6,6 +6,6 @@ thumbnail: { thumbnailSrc }
 draft: false
 ---
 
-![](./images/next.js+recoil.png)
+![](./images/using-recoil-in-next.js-1.png)
 
 # Intro
