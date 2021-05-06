@@ -32,12 +32,17 @@ draft: false
     2. Node 2개 사용
     3. B2S: vCPU 2개, 4GB RAM, 8GB 임시 스토리지, ₩58.482(대략) / 시간
     4. ₩85,383.43
-3.  Azure Storage
-    1. 공식문서의 spec에 맞게 100gb
-    2. ₩7,495.23
-4.  App Insight
+3.  Azure Diks
+    1. mysql server에서 사용 됨
+    1. 표준 SSD LRS
+    1. E3: 16 GiB, 500 프로비저닝된 IOPS, 60 프로비저닝된 MB/초, ₩1,349.580/월
+4.  Azure Storage
+    1. 공식문서의 spec에 맞게 100gb 이라면 약 ₩7,495.23
+    1. 가격이 저렴해서 일단은 10gb으로 시작하고 올리는 것을 전략으로 설정
+    1. 10gb를 사용하면 월 약 ₩814 소요됨
+5.  App Insight
     1. 따로 가격이 없는 듯
-5.  Dashboard
+6.  Dashboard
     1. 따로 가격이 없는 듯
 
 # Blueprint
@@ -47,6 +52,7 @@ draft: false
 3. namespace로 환경에 맞게 구분합니다.
 4. ingress 설정시 `.yaml` 으로 처리 안하는 것도 모두 iac에 맞게 export 하도록 합니다.
 5. StorageClass 용량 설계
+   1. pvc의 경우 하나의 스토리지 클래스에 여러게의 파일 공유영역이 생성됩니다
 6. Mysql 접속 계정 설정
 7. Ingress 도메인 설계
 8. replicat 개수
