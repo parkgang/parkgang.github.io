@@ -134,4 +134,87 @@ const IndexPage = () => {
 export default IndexPage
 ```
 
+router 되더라도 상태가 유지되는게 핵심이겟죠? 다른 pages도 만들어 봅시다.
+
+`/pages/post.js` 를 생성하고 아래와 같이 코딩합니다.
+
+```js
+import Link from 'next/link'
+import { useRecoilState } from 'recoil'
+import { pageNameState } from '../states'
+
+const PostPage = () => {
+  const [pageName, setPageName] = useRecoilState(pageNameState)
+
+  return (
+    <div>
+      <div>
+        <h1>Post Page!</h1>
+      </div>
+      <div>
+        <span>pageName 상태: {pageName}</span>
+      </div>
+      <div>
+        <button
+          onClick={() => {
+            setPageName('PostPage')
+          }}
+        >
+          현재 페이지 이름으로 상태 변경
+        </button>
+      </div>
+      <Link href="/">
+        <button>Index Pages 이동</button>
+      </Link>
+    </div>
+  )
+}
+
+export default PostPage
+```
+
+`post` 페이지로 이동하기 쉽게 `/pages/index.js` 에 아래의 코드를 추가합니다.
+
+```js{1,25-27}
+import Link from 'next/link'
+import { useRecoilState } from 'recoil'
+import { pageNameState } from '../states'
+
+const IndexPage = () => {
+  const [pageName, setPageName] = useRecoilState(pageNameState)
+
+  return (
+    <div>
+      <div>
+        <h1>Index Page!</h1>
+      </div>
+      <div>
+        <span>pageName 상태: {pageName}</span>
+      </div>
+      <div>
+        <button
+          onClick={() => {
+            setPageName('IndexPage')
+          }}
+        >
+          현재 페이지 이름으로 상태 변경
+        </button>
+      </div>
+      <Link href="/post">
+        <button>Post Pages 이동</button>
+      </Link>
+    </div>
+  )
+}
+
+export default IndexPage
+```
+
+## 테스트 결과
+
+next.js를 실행해보면 index page에서 변경된 상태가 post page까지 잘 전달되는 것을 볼 수 있습니다. 그 반대도 마찬가지 이고요 이로써 recoil이 정상적으로 동작하는 것을 확인하였습니다.
+
+![](./images/using-recoil-in-next.js-4.png)
+![](./images/using-recoil-in-next.js-5.png)
+
 # 비동기 작업은 어떻게?
