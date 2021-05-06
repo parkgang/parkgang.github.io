@@ -25,17 +25,20 @@ draft: false
 # 비용 계산
 
 1.  사용 가능한 가격
-    1. ₩168,698
+    1. 새로운 구독 계정: ₩168,698
+    1. 이전에 사용하던 구독 계정: ₩144,967
 2.  AKS
-    1. B2S: 2 vCPU, 4GB RAM, 8GB 임시 스토리지, ₩58.482(대략) /시간 _ vm2 _ 한달
-    2. ₩85,383.43
-3.  App Insight
-    1. 따로 가격이 없는 듯
-4.  Dashboard
-    1. 따로 가격이 없는 듯
-5.  azure storage
+    1. 한달 기준
+    2. Node 2개 사용
+    3. B2S: vCPU 2개, 4GB RAM, 8GB 임시 스토리지, ₩58.482(대략) / 시간
+    4. ₩85,383.43
+3.  Azure Storage
     1. 공식문서의 spec에 맞게 100gb
     2. ₩7,495.23
+4.  App Insight
+    1. 따로 가격이 없는 듯
+5.  Dashboard
+    1. 따로 가격이 없는 듯
 
 # Blueprint
 
