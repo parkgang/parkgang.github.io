@@ -217,4 +217,29 @@ next.js를 실행해보면 index page에서 변경된 상태가 post page까지 
 ![](./images/using-recoil-in-next.js-4.png)
 ![](./images/using-recoil-in-next.js-5.png)
 
+# Duplicate atom key Waring
+
+동작에는 문제가 없지만 사실 next.js console에서는 Warning을 출력하고 있습니다.
+
+```
+Duplicate atom key "pageNameState". This is a FATAL ERROR in
+      production. But it is safe to ignore this warning if it occurred because of
+      hot module replacement.
+```
+
+이는 SSR이라서 여러면 atom을 생성하면서 경고 메시지가 출력되는 것입니다.  
+현재 공식 [이슈](https://github.com/facebookexperimental/Recoil/issues/733)로 open 되어 있습니다. 수정까지는 시간이 꽤 걸릴 수 있으니 경고 창을 보고 싶지 않다! 라면 우회 방법을 알려드리도록 하겠습니다.
+
+## 우회 방법
+
+되게 간단합니다. recoil module에서 해당 경고 메시지를 주석처리 하는 방법입니다.
+
+1. `node_modules/recoil` 의 디렉터리에서 모든 `recoil.js` 파일의 `registerNode` 함수를 찾습니다.
+1. 해당 함수를 잘 보시면 위에서 출력되는 경고 메시지를 출력해주는 함수입니다. `console.warn` 부분을 주석하면 더 이상 출력되지 않습니다.
+
+![](./images/using-recoil-in-next.js-6.png)
+
+> 이 방법은 개인 에게만 적용되며 추천하지 않습니다.  
+> 실제로 key가 중복되는 경우를 구별할 수 없기 때문입니다.
+
 # 비동기 작업은 어떻게?
