@@ -19,7 +19,7 @@ draft: false
 
 # Hi
 
-1. 클라우드 네이티브 이므로 가격에 주의하도록 합니다.
+1. 클라우드 네이티브 이므로 가격에 주의하는 내용을 기술합니다.
 
 # 비용 계산
 
@@ -36,7 +36,7 @@ draft: false
     1. 공식문서의 spec에 맞게 100gb
     2. ₩7,495.23
 
-# blueprint
+# Blueprint
 
 1. [인프라 구성도를 그립니다.](https://github.com/dhslrl321/Finx-App)
 2. 템플릿은 최대한 helm을 적용합니다.
