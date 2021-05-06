@@ -16,6 +16,7 @@ draft: false
 | 4편   | [github 설정](/devops/workflows-with-aks-github-slack-4)   |
 | `5편` | [slack 설정](/devops/workflows-with-aks-github-slack-5)    |
 | 6편   | [github action](/devops/workflows-with-aks-github-slack-6) |
+| 7편   | [회고](/devops/workflows-with-aks-github-slack-7)          |
 
 # Hi
 
