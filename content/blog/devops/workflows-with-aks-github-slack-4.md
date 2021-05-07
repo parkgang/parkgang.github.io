@@ -21,7 +21,7 @@ draft: false
 # Hi
 
 1. github org 생성
-2. 팀 생성
+2. 팀 생성 및 맴버 추가
    1. 전략적으로 하나의 팀으로 관리하는게 편할 꺼 같음
    2. Yamu
 3. 리포 생성
@@ -31,11 +31,16 @@ draft: false
    4. api-gateway
    5. mock-service
    6. todo-service
-4. 브랜치 정책
+4. hello, world test 코드 작성
+5. docker file 작성
+6. 빌드 후 컨테이너 레지스터리로 push
+   1. 깃허브 컨테이너 레지스터 token 확보
+7. k8s에서 ingress와 함께 정상적으로 동작하는지 확인
+8. 브랜치 정책
    1. main
    2. release/\*
    3. feature/사람 이름
-5. 권한 부여
+9. 권한 부여
    1. 필수 리뷰어
    2. branch보호 (main, release)
    3. 컨테이너 레지스터리 기본 값을 public으로 설정합니다.
