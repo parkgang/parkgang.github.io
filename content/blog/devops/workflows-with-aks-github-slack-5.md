@@ -22,3 +22,5 @@ draft: false
 
 1. slack 워크 스페이스 생성
 2. 채널 생성
+3. slack에 github app을 추가하기
+   1. notion의 사진을 인용합니다.
