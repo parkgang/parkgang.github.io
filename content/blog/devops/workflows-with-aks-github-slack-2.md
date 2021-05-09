@@ -51,14 +51,15 @@ draft: false
 2. 템플릿은 최대한 helm을 적용합니다.
 3. namespace로 환경에 맞게 구분합니다.
 4. ingress 설정시 `.yaml` 으로 처리 안하는 것도 모두 iac에 맞게 export 하도록 합니다.
-5. StorageClass 용량 설계
+5. `.yml` 말고 `.yaml` 만 사용합니다.
+6. StorageClass 용량 설계
    1. pvc의 경우 하나의 스토리지 클래스에 여러게의 파일 공유영역이 생성됩니다
-6. Mysql 접속 계정 설정
-7. Ingress 도메인 설계
-8. replicat 개수
-9. ARM template를 export 합니다.
-   1. 인수인계 및 다른 환경으로 프로비저닝을 위함입니다.
-10. 리소스 명칭
+7. Mysql 접속 계정 설정
+8. Ingress 도메인 설계
+9. replicat 개수
+10. ARM template를 export 합니다.
+    1. 인수인계 및 다른 환경으로 프로비저닝을 위함입니다.
+11. 리소스 명칭
     1. 리소스 그룹 이름
     2. k8s cluster 이름
     3. acr 이름

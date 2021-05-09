@@ -24,3 +24,5 @@ draft: false
 2. 채널 생성
 3. slack에 github app을 추가하기
    1. notion의 사진을 인용합니다.
+4. 추가적으로 깃허브에서 필요한 정보만 받도록 수정합니다.
+   1. /github subscribe 명렁어로 수정한 사진을 첨부합니다.
