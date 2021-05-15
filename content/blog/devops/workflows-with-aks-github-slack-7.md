@@ -25,3 +25,5 @@ draft: false
 1. github action 실패시 slack 알림이 안가는거
 1. 인프라를 테라폼 등을 이용하여 완벽하게 iac으로 만들지 못한 것
 1. ingress 불필요하게 도메인이 많은 점, 하나의 도메인을 path 단위로 `/` 화 시키지 못하여 복잡도가 증가되었습니다.
+1. 더 가벼운 docker image를 연구하지 못한 것
+1. orm 연결을 위해서 db가 생성되어야 하는데 db container을 올리는 곳과 orm이 다른 코드로 관리되어 자동화 되지 않은 점
