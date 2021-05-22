@@ -329,7 +329,9 @@ const PostPage = () => {
 export default PostPage
 ```
 
-SSR에서는 Suspense를 지원하지 않기 때문에 `useRecoilValueLoadable` 를 사용해야합니다.
+[SSR에서는 Suspense를 지원하지 않기 때문에](https://ko.reactjs.org/docs/code-splitting.html#reactlazy) `useRecoilValueLoadable` 를 사용해야합니다.
+
+> 찾아보니 SSR에서도 Suspense 사용할 수 있는 방법이 있습니다! 나중에 시간이 될 때 소개하도록 하겠습니다.
 
 ## 테스트 결과
 
