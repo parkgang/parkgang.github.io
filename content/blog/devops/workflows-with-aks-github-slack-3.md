@@ -25,7 +25,8 @@ draft: false
 1. azure resource group 생성
 2. aks 생성
    1. http 컨트롤러 사용으로 생성
-   2. 이외의 값은 동적으로 변경이 가능함
+   2. Azure Monitor 사용 안함 (돈이 많이 들어감)
+   3. 이외의 값은 동적으로 변경이 가능함
 3. azure cli 설치 후 로그인
 4. 클러스터 접속
 5. ingress 생성
