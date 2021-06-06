@@ -60,8 +60,8 @@ draft: false
          ```
          * @parkgang ruddms936@naver.com
          ```
-   5. 팀에 해당 repo를 추가하고 쓰기 권한으로 변경
-      1. 그래야 일반 팀원은 필수 리뷰어를 거치도록 디자인 됨
+   5. 팀에 해당 repo를 추가하고 쓰기 권한으로 변경 (그래야 일반 팀원은 필수 리뷰어를 거치도록 디자인 됨)
+   6. develop branch의 경우 Allow deletions 활성화 (prod 출시 후 git flow가 꼬이지 않도록 develop도 자동 삭제를 위함)
 10. 이외
     5. 스쿼시 병합만 가능 (Squash and merge)
        1. 승인할 때 코멘트는 이슈 쫓아가면 상관 없지만 이름은 잘 작성하기
@@ -70,5 +70,6 @@ draft: false
        4. db 접속 정보과 같이 중요한 부분은 GitHub Secrets 기능을 활용
 11. 추가적으로 설정한 github 정책을 사진으로 첨부합니다.
     1. 머지시 자동으로 브랜치 삭제
-    2. 스쿼시 병합만 허용
+    2. 스쿼시 병합 허용 (feature => develop에 사용)
+    3. 리베이스 병합 허용 (develop => main에 사용)
 12. 추가적으로 깃허브 프로젝트 설정한 것을 사진으로 첨부합니다.

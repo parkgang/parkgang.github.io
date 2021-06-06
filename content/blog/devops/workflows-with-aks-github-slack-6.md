@@ -54,3 +54,4 @@ draft: false
       1. SLACK_WEBHOOK
          1. cicd 결과를 전달하는 slack app token
          1. 노션에 있는 정보 사용
+1. 이외 모든 배포 테스트는 test 브랜치에서 자동화로 이루어 지도록 디자인
