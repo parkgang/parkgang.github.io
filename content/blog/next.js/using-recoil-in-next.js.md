@@ -6,7 +6,7 @@ thumbnail: { thumbnailSrc }
 draft: false
 ---
 
-![](./images/using-recoil-in-next.js-1.png)
+![](./images/using-recoil-in-next.js/using-recoil-in-next.js-1.png)
 
 # Intro
 
@@ -35,7 +35,7 @@ next.js는 SSR를 지원하기 때문에 각각의 페이지 별로 정적파일
 npx create-next-app
 ```
 
-![](./images/using-recoil-in-next.js-2.png)
+![](./images/using-recoil-in-next.js/using-recoil-in-next.js-2.png)
 
 > 공식으로 제공하는 [with-recoil](https://github.com/vercel/next.js/tree/canary/examples/with-recoil) 템플릿이 있었지만 마지막 업데이트가 거즘 8개월 전이고 recoil 버전 업도 많이 된 상태이기 때문에 사용하지 않았습니다.
 
@@ -91,7 +91,7 @@ export default MyApp
 
 일단 잘 작동하는지 테스트를 해볼까요? `/states` 디렉터리를 생성하고 내부에 `index.js`를 생성해 봅시다.
 
-![](./images/using-recoil-in-next.js-3.png)
+![](./images/using-recoil-in-next.js/using-recoil-in-next.js-3.png)
 
 해당 파일에 아래의 코드를 작성합니다.
 
@@ -218,8 +218,8 @@ export default IndexPage
 next.js를 실행해보면 index page에서 변경된 상태가 post page까지 잘 전달되는 것을 볼 수 있습니다. 그 반대도 마찬가지 입니다.  
 이로써 recoil이 정상적으로 동작하는 것을 확인하였습니다.
 
-![](./images/using-recoil-in-next.js-4.png)
-![](./images/using-recoil-in-next.js-5.png)
+![](./images/using-recoil-in-next.js/using-recoil-in-next.js-4.png)
+![](./images/using-recoil-in-next.js/using-recoil-in-next.js-5.png)
 
 # Duplicate atom key Waring
 
@@ -241,7 +241,7 @@ Duplicate atom key "pageNameState". This is a FATAL ERROR in
 1. `node_modules/recoil` 의 디렉터리에서 모든 `recoil.js` 파일의 `registerNode` 함수를 찾습니다.
 1. 해당 함수를 잘 보시면 위에서 출력되는 경고 메시지를 출력해주는 함수입니다. `console.warn` 부분을 주석하면 더 이상 출력되지 않습니다.
 
-![](./images/using-recoil-in-next.js-6.png)
+![](./images/using-recoil-in-next.js/using-recoil-in-next.js-6.png)
 
 > 이 방법은 개인 에게만 적용되며 추천하지 않습니다.  
 > 실제로 key가 중복되는 경우를 구별할 수 없기 때문입니다.
@@ -278,7 +278,7 @@ export const getNameSelector = selector({
 > `selector` 에서 반환되는 값은 필요한 값만 반환해야합니다.  
 > CSR에서는 axios의 res 값을 모두 반환해서 사용해도 문제가 없었는데 next.js에서는 모두 반환하면 에러가 발생합니다.  
 > 아마 테스트 해보시면 비동기 콜을 하는 page를 다른 페이지에서 link를 통해 들어가면 문제가 없지만 해당 page 주소로 바로 접속하면 아래와 같은 에러가 출력되면서 next.js server가 down 됩니다.
-> ![](./images/using-recoil-in-next.js-7.png)
+> ![](./images/using-recoil-in-next.js/using-recoil-in-next.js-7.png)
 > axios 에서 return 데이터 중 `.data` 만을 사용하지 않고 모두 던지면 `selector` 호출 기록은 있지만 렌더링하다가 next.js에서 run time error 가 발생합니다.  
 > 해당 문제는 `npm run dev` 일 때만 발생합니다. 같은 코드인데 build 되어 start으로 실행 된 next.js server에서는 해당 문제가 발생하지 않습니다. 하지만 dev 환경의 live server가 되지 않기 때문에 전략적으로 필요한 데이터만 return 하여 사용하는 것이 좋아보입니다.
 
@@ -337,7 +337,7 @@ export default PostPage
 
 아래와 같이 정상적으로 렌더링 되는 것을 확인할 수 있습니다.
 
-![](./images/using-recoil-in-next.js-8.png)
+![](./images/using-recoil-in-next.js/using-recoil-in-next.js-8.png)
 
 > 혹시라도 해당 api가 어디서 만들어 진건지? 하시면 기본 템플릿으로 만들면 생성되는 next.js api를 사용한 것입니다 😉
 
@@ -346,7 +346,7 @@ export default PostPage
 자 이제 문제가 없는거 같지만 아직 한가지 더 남아있습니다...  
 한번 `npm run build` 으로 build를 해보시겟어요? 또 경고가 출력됩니다.
 
-![](./images/using-recoil-in-next.js-9.png)
+![](./images/using-recoil-in-next.js/using-recoil-in-next.js-9.png)
 
 build 시점에 `selector` 에서 호출하는 api가 정상이 아니면 에러가 발생합니다.
 
@@ -378,7 +378,7 @@ export const getNameSelector = selector({
 })
 ```
 
-![](./images/using-recoil-in-next.js-10.png)
+![](./images/using-recoil-in-next.js/using-recoil-in-next.js-10.png)
 
 결론적으로 경고 메시지가 출력되어도, catch에 걸리더라도 **구어진 정적파일은 문제가 없으며 next.js server가 실행했을 때 정상적으로 동작합니다.**
 
