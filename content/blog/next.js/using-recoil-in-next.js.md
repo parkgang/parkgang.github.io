@@ -27,7 +27,7 @@ next.js는 SSR를 지원하기 때문에 각각의 페이지 별로 정적파일
 # 프로젝트를 생성해보자
 
 > 해당 실습이 진행된 코드는 아래의 링크에서 확인하실 수 있습니다.  
-> [parkgang/front-end-container/next.js/js/parkgang.github.io-with-recoil/](https://github.com/parkgang/front-end-container/tree/master/next.js/js/parkgang.github.io-with-recoil)
+> [parkgang/blog-container/next.js/next.js-with-recoil](https://github.com/parkgang/blog-container/tree/main/next.js/next.js-with-recoil)
 
 먼저 아래의 명령어로 next.js 프로젝트를 실행하도록 하겠습니다.
 
