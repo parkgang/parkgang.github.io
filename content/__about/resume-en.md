@@ -19,11 +19,11 @@ JS/TS의 node 계열을 좋아합니다.
 
 작게나마 애자일 조직에서 일한 경험이 있습니다.
 
-|         |                                                                 |
-| ------- | --------------------------------------------------------------- |
-| GitHub  | https://github.com/parkgang                                     |
-| Blog    | https://parkgang.github.io/, https://velog.io/@ruddms936/series |
-| Contact | ruddms936@naver.com                                             |
+|         |                                                                |
+| ------- | -------------------------------------------------------------- |
+| GitHub  | https://github.com/parkgang                                    |
+| Blog    | https://parkgang.github.io, https://velog.io/@ruddms936/series |
+| Contact | ruddms936@naver.com                                            |
 
 # Project
 
@@ -34,3 +34,7 @@ JS/TS의 node 계열을 좋아합니다.
 ## [Belf](https://github.com/belf-kr)
 
 사용자의 코스를 공유하는 Todo 서비스를 만들고 있어요!
+
+## [Modern Board](https://github.com/parkgang/modern-board)
+
+일반적인 게시판 웹 앱이며 Microsoft Teams 룩앤필에 맞게 개발하고 있어요!
