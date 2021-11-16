@@ -8,7 +8,7 @@ draft: false
 
 # TL;DR
 
-1. gin + react boilerplate 이며 [react-with-gin-boilerplate](https://github.com/parkgang/react-with-gin-boilerplate) 에서 살펴보실 수 있습니다.
+1. gin + react boilerplate 이며 [parkgang/react-with-gin-boilerplate](https://github.com/parkgang/react-with-gin-boilerplate) 에서 살펴보실 수 있습니다.
 1. prod 환경도 json 가져와서 사용하는데 이는 보안에 위험할 수 있으니 기호에 맞게 수정해서 사용해주세요.
    > 예를 들어 환경변수로 바꾸기
 
@@ -80,7 +80,7 @@ react에 많은 component framework가 있지만 그 중에서도 아주 외소�
 
 이렇게 위와 같은 목표로 boilerplate가 완성되었습니다.
 
-[react-with-gin-boilerplate](https://github.com/parkgang/react-with-gin-boilerplate) 에서 만나보실 수 있으며 기존 예제 코드가 마음에 안드는 경우
+[parkgang/react-with-gin-boilerplate](https://github.com/parkgang/react-with-gin-boilerplate) 에서 만나보실 수 있으며 기존 예제 코드가 마음에 안드는 경우
 
 > 예를 들어 mysql을 사용하지 않는 다거나 그냥 바닐라 cra을 원하는 경우
 

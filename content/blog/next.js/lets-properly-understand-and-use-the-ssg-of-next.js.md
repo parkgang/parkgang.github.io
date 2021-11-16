@@ -77,7 +77,7 @@ Static으로 구어지기 때문에 next.js server 이외 serverless deployment�
 
 ## 한번 해보자
 
-실습을 위해서 [parkgang/blog-container/next.js/next.js-ssg-tutorial](https://github.com/parkgang/blog-container/tree/main/next.js/next.js-ssg-tutorial) 코드를 참고하시면 됩니다.
+실습을 위해서 [parkgang/next.js-ssg-tutorial](https://github.com/parkgang/next.js-ssg-tutorial) 코드를 참고하시면 됩니다.
 
 > 코드 상태는 정말 안 좋으므로 돌아가는 샘플로서만 사용해 주세요. (해당 글 샘플을 위해서 태어난 코드라 상태가 🤭)
 
