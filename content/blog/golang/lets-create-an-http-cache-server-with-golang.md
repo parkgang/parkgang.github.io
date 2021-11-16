@@ -50,8 +50,9 @@ HTTP Cache에 대해서 찾아보면 대부분 각 Header가 어떻게 동작하
    1. 이로써 파일이 수정될 때마다 (파일을 그냥 저장할 때도 해당) 수정된 일자가 변경되어서 `ETag` 가 계속 변하게 될 것입니다.
 1. `r.Header.Get("If-None-Match")` 쪽 코드를 보면 `ETag` 를 검증하는 로직이 있는데 request header에 `If-None-Match` 값이 존재하고 request한 `ETag` 와 현재 파일의 `ETag` 를 구해서 비교 후 같으면 `304` 를 응답하는 코드입니다.
    > 물론 제품 수준의 퀄리티는 아니지만 메커니즘 이해를 위한 구현은 이렇게 쉬운데 이 부분이 블랙박스로 처리되어 참으로 이해가 어려웠습니다.
+1. 또한, 각각의 API가 실제로 호출 여부를 확인하기 위해서 호출 시 응답 전에 console에 글자를 출력하도록 코딩되어 있습니다.
 
-```go{46,66,69-76}
+```go{47,67,70-77}
 package main
 
 import (
@@ -97,6 +98,7 @@ func imageHandler(w http.ResponseWriter, r *http.Request) {
 		log.Println("unable to encode image.")
 	}
 
+	log.Println("이미지 응답")
 	w.Header().Set("Cache-Control", "private, max-age=5")
 	w.Header().Set("Content-Type", "image/jpeg")
 	w.Header().Set("Content-Length", strconv.Itoa(len(buffer.Bytes())))
@@ -209,9 +211,54 @@ func textHandler(w http.ResponseWriter, r *http.Request) {
 
 # 원하는 대로 동작하는지 확인해보자
 
-## 이미지
+## 서버 실행
 
-## 텍스트
+1. 자 이제 캐시가 잘 되는지 확인해볼까요? 위에서 말한 repo에서 소스코드를 clone 받고 `go run main.go` 으로 서버를 시작해 봅시다.
+1. 캐시 여부를 편리하기 보기위해서 저는 친숙한 `Chrome` 을 사용하도록 하겠습니다.
+   > 대부분 비슷하긴 하지만 `Chrome` 이 아니여도 디버깅이 편하신 분은 다른 브라우저를 사용하셔도 됩니다.
+1. 그리고 [http://localhost:8080](http://localhost:8080) 주소로 접속하고 개발자 도구를 켜주세요! 아마 아래와 같이 화면이 될 것 입니다.
+   ![](./images/lets-create-an-http-cache-server-with-golang/1.png)
+
+## 이미지 캐시 확인
+
+우선 `이미지 요청` 버튼을 클릭해 볼까요?
+
+![](./images/lets-create-an-http-cache-server-with-golang/2.png)
+
+위와 같이 요청 후 서버에서 응답된 것을 확인할 수 있네요 응답 받은 이미지 용량은 `1.6kB` 이라고 하네요! 그럼 바로 한번 더 빠르게 `이미지 요청` 버튼을 클릭해 볼까요?
+
+![](./images/lets-create-an-http-cache-server-with-golang/3.png)
+
+이번에는 뭔가 요청이 된거 같으나 응답 부분의 용량이 `(디스크 캐시)` 인 것을 확인할 수 있습니다. 네, 그렇습니다 캐시되서 그렇습니다. 🤭 네트워크 요청 내역을 자세히 봐볼까요?
+
+![](./images/lets-create-an-http-cache-server-with-golang/4.png)
+
+응답 header에 `Cache-Control: private, max-age=5` 가 존재하는 것을 볼 수 있습니다. 이미지 조회 API에 넣어 둔 header인 것을 알 수 있습니다. 앞으로 5초 동안은 해당 URL 요청에 대해서 Server에 물어보지 않고 브라우저 캐시를 사용합니다.
+
+중요한 것은 네트워크 탭에는 **마치 요청된 것** 같아 보이지만 실제로는 **Server에 요청하지 않는** 다는 것 입니다.
+
+![](./images/lets-create-an-http-cache-server-with-golang/5.png)
+
+Server Console을 보니까 요청이 1회 들어온 것을 확인할 수 있습니다.
+
+> 앗, 혹시라도 1회 이상 요청되었나요? 그렇다면 2가지를 의심하셔야 합니다.
+>
+> 첫번째로 브라우저 개발자 도구에 `캐시 사용 중지` 체크 박스가 해재되어있는지 확인해주세요. 해당 체크박스가 체크되어 있으면 캐시되지 않습니다ㅠㅠ
+>
+> 두번째로 `max-age` 값을 올리시거나 아니면 더 빨리 버튼을 클릭해 보세요 빠른 테스트를 위해서 캐시 시간을 5초로 지정하였는데 5초가 지나면 해당 URL의 캐시는 무효화 되어 Server에게 다시 요청을 보내게 됩니다. 해당 경우가 아닌지 한번 확인해보세요
+
+이외 아래의 RGBA 값과 `max-age` 값을 바꾸면서 테스트 해보세요. 첫 조회된 `max-age` 시간 동안은 색상 값을 변경하더라도 조회되지 않지만 `max-age` 가 지나면 변경되는 것을 확인할 수 있습니다.
+
+```go{4, 6}
+func imageHandler(w http.ResponseWriter, r *http.Request) {
+	...
+	// 검은색 이미지 생성
+	tempImage := color.RGBA{0, 0, 0, 255}
+	...
+	w.Header().Set("Cache-Control", "private, max-age=5")
+	...
+}
+```
 
 # 결론
 
