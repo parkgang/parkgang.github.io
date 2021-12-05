@@ -217,19 +217,59 @@ TLS 발급 위함과 더불어 도메인으로 ingress에 접근할 수 있도�
 
 ## cert-manager 설치
 
+1
+
+![](./images/workflows-with-aks-github-slack-3/19.png)
+
 ## CA 클러스터 발급자 만들기
+
+1
+
+![](./images/workflows-with-aks-github-slack-3/20.png)
 
 ## 데모 애플리케이션 실행
 
+1
+
+![](./images/workflows-with-aks-github-slack-3/21.png)
+
 ## 수신 경로 만들기
 
-> 결론적으로 수신 경로를 정의한 모든 k8s 요청은 ingress로 그러면 알아서 HTTP 처리와 Load balancing까지 해줌
+1
+
+![](./images/workflows-with-aks-github-slack-3/22.png)
+
+## 인증서 개체가 만들어졌는지 확인합니다.
+
+1
+
+![](./images/workflows-with-aks-github-slack-3/23.png)
+
+## 수신 구성 테스트
+
+1
+
+![](./images/workflows-with-aks-github-slack-3/24.png)
+![](./images/workflows-with-aks-github-slack-3/25.png)
+![](./images/workflows-with-aks-github-slack-3/26.png)
+
+## 결론
+
+수신 경로를 정의한 모든 k8s 요청은 ingress로 그러면 알아서 HTTP 처리와 Load balancing까지 처리하게 됩니다.
 
 # 네임 스페이스 생성
+
+1
+
+![](./images/workflows-with-aks-github-slack-3/27.png)
 
 # 스토리지 클레스 생성
 
 1.  azure files를 위함
+
+![](./images/workflows-with-aks-github-slack-3/28.png)
+![](./images/workflows-with-aks-github-slack-3/29.png)
+![](./images/workflows-with-aks-github-slack-3/30.png)
 
 # 정리
 
