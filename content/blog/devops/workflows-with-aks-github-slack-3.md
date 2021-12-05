@@ -91,7 +91,7 @@ resource group 이름을 입력하시고 영역을 선택하도록 합니다. �
    1. 위의 노드 크기에서 설정한 Node의 개수입니다.
    1. 저는 위에서 말한대로 금액을 맞추기 위해서 `3` 개로 설정하였습니다.
 
-![](./images/workflows-with-aks-github-slack-3/5.png)
+![](./images/workflows-with-aks-github-slack-3/5-0.png)
 
 두번째 step은 노드 풀 입니다. Azure에서 k8s의 Node는 하나의 VM으로 취급되는 것으로 확인됩니다.
 
@@ -107,9 +107,9 @@ resource group 이름을 입력하시고 영역을 선택하도록 합니다. �
 > <details>
 > <summary>► 가상 머신 확장 집합 구경하기</summary>
 >
-> ![](./images/workflows-with-aks-github-slack-3/6-1.png)
+> ![](./images/workflows-with-aks-github-slack-3/5-1.png)
 > Node가 3개 이므로 인스턴스가 3개 존재하는 것을 확인할 수 있습니다.
-> ![](./images/workflows-with-aks-github-slack-3/6-2.png)
+> ![](./images/workflows-with-aks-github-slack-3/5-2.png)
 >
 > </details>
 
@@ -117,19 +117,19 @@ resource group 이름을 입력하시고 영역을 선택하도록 합니다. �
 
 세번째 step은 인증 입니다. 저는 azure cli를 통해서 k8s master node에 접근할 것 이고 추후, master node에 추가적으로 접근해야하는 엔지니어가 필요하면 RBAC을 사용할 것 이기 때문에 기본 값 그대로 두고 다음으로 넘어갔습니다.
 
-![](./images/workflows-with-aks-github-slack-3/7.png)
+![](./images/workflows-with-aks-github-slack-3/7-0.png)
 
 네번째 step은 네트워킹 입니다. 여기서는 `HTTP 애플리케이션 라우팅 사용` 체크 이외에는 모두 기본 값을 사용하도록 했습니다.
 
 > `HTTP 애플리케이션 라우팅` 이란?  
 > 쉽게 말해서 DNS 영역을 생성해주고 Ingress에 등록되는 도메인을 자동으로 Azure DNS 영역의 레코드에 추가/삭제 해주는 것 입니다.
-> ![](./images/workflows-with-aks-github-slack-3/8-1.png)
+> ![](./images/workflows-with-aks-github-slack-3/7-1.png)
 
 > 🚨 여기서 `HTTP 애플리케이션 라우팅` 를 체크한 이유는? 🚨  
 > [공식문서](https://go.microsoft.com/fwlink/?linkid=2032149) 에서는 `HTTP 애플리케이션 라우팅 사용` 을 프로덕션에서는 사용하지 말라고 합니다. 그럼에도 여기서 사용하는 이유는 체크 시 리소스 그룹에 알아서 DNS을 생성해주기 때문입니다.  
-> [![](./images/workflows-with-aks-github-slack-3/8-2.png)](https://docs.microsoft.com/ko-kr/azure/aks/http-application-routing)
+> [![](./images/workflows-with-aks-github-slack-3/7-2.png)](https://docs.microsoft.com/ko-kr/azure/aks/http-application-routing)
 > 어짜핀 우리도 **HTTPS를 사용하기 위해서 따로 수신 컨트롤러를 만들겁니다.** 그럼에도 `HTTP 애플리케이션 라우팅 사용` 을 체크한 이유는 `HTTPS 수신 컨트롤러` 를 만들기 위해서는 도메인이 필요하기 때문입니다. 정확히 말하면 `HTTPS 수신 컨트롤러` 를 만드는 과정에 TLS 발급을 위하여 도메인이 필요하기 때문입니다.
-> [![](./images/workflows-with-aks-github-slack-3/8-3.png)](https://docs.microsoft.com/ko-kr/azure/aks/ingress-tls?tabs=azure-cli#before-you-begin)
+> [![](./images/workflows-with-aks-github-slack-3/7-3.png)](https://docs.microsoft.com/ko-kr/azure/aks/ingress-tls?tabs=azure-cli#before-you-begin)
 > 정리하자면 만약 여러분의 환경이 `HTTPS 수신 컨트롤러` 가 필요하지 않고 k8s svc를 IP가 아닌 도메인으로 접근하고 싶은데 DNS가 없어서 DNS가 필요하다면 체크하셔도 됩니다. 저는 이후 생성할 때는 <u>GoDaddy에서 도메인을 구입</u>한 상태라서 체크하지 않았습니다. 그래도 해당 섹션에서는 <u>`HTTP 애플리케이션 라우팅 사용` 가 체크된 것을 기준으로 설명</u>합니다. 혹시라도 이해가 안되는 부분이 있다면 댓글을 남겨주세요.
 
 ![](./images/workflows-with-aks-github-slack-3/8.png)
@@ -194,7 +194,7 @@ TLS 발급 위함과 더불어 도메인으로 ingress에 접근할 수 있도�
 
 추후, ingress 수신 경로에 어떤 서브도메인이 올지 모름으로 모든 서브도메인을 받을 수 있도록 `*` 으로 설정하도록 합니다.
 
-![](./images/workflows-with-aks-github-slack-3/17.png)
+![](./images/workflows-with-aks-github-slack-3/17-0.png)
 
 > 만약, 여기서 다른 DNS가 있다면? 해당 영역의 A 레코드에 추가해주면 됩니다. 핵심은 도메인으로 질의했을 때 ingress IP가 리졸빙되면 됩니다.
 >
