@@ -217,37 +217,51 @@ TLS 발급 위함과 더불어 도메인으로 ingress에 접근할 수 있도�
 
 ## cert-manager 설치
 
-1
+자동으로 Lets Encrypt 인증서 생성 및 관리 기능을 사용하기 위하여 cert-manager를 설치합니다.
 
 ![](./images/workflows-with-aks-github-slack-3/19.png)
 
 ## CA 클러스터 발급자 만들기
 
-1
+인증서를 발급하기 위하여 발급자를 등록합니다.
+
+`yaml` 은 [공식문서 YAML](https://docs.microsoft.com/ko-kr/azure/aks/ingress-tls?tabs=azure-cli#create-a-ca-cluster-issuer) 와 [프로젝트에 사용한 YAML](https://github.com/belf-kr/infrastructure-as-code/blob/v0.1.0/https-ingress-controller/cluster-issuer.yaml) 중 참고합니다.
 
 ![](./images/workflows-with-aks-github-slack-3/20.png)
 
+> 여기서 이메일 주소를 정상적으로 입력하지 않으면 TLS가 발급되지 않음으로 주의하세요!
+
 ## 데모 애플리케이션 실행
 
-1
+ingress와 TLS 인증서가 정상적으로 적용되었는지 테스트를 위하여 데모 애플리케이션 배포하도록 합니다.
+
+저는 삭제하게 편하게 테스트 컨테이너는 `test` namespace에 배치하도록 하였습니다.
+
+`yaml` 은 [공식문서 YAML](https://docs.microsoft.com/ko-kr/azure/aks/ingress-tls?tabs=azure-cli#run-demo-applications) 와 [프로젝트에 사용한 YAML](https://github.com/belf-kr/infrastructure-as-code/tree/v0.1.0/https-ingress-controller/test) 중 참고합니다.
+
+> 주의, service endpoint는 ns에 맞게 설정되므로 ingress의 path도 수정해줘야합니다. 이런게 복잡하면 그냥 공식문서를 그대로 따라해주세요.
 
 ![](./images/workflows-with-aks-github-slack-3/21.png)
 
 ## 수신 경로 만들기
 
-1
+데모 애플리케이션을 테스트하기 위하여 수신 경로를 생성합니다.
+
+`yaml` 은 [공식문서 YAML](https://docs.microsoft.com/ko-kr/azure/aks/ingress-tls?tabs=azure-cli#create-an-ingress-route) 와 [프로젝트에 사용한 YAML](https://github.com/belf-kr/infrastructure-as-code/blob/v0.1.0/https-ingress-controller/main-ingress.yaml) 중 참고합니다.
 
 ![](./images/workflows-with-aks-github-slack-3/22.png)
 
 ## 인증서 개체가 만들어졌는지 확인합니다.
 
-1
+테스트 이전에 TLS 인증서가 정상적으로 생성되었는지 확인합니다.
 
 ![](./images/workflows-with-aks-github-slack-3/23.png)
 
 ## 수신 구성 테스트
 
-1
+배포된 데모 애플리케이션이 수신 경로에 맞게 잘 응답되는지, TLS 인증서가 적용되었는지 확인하도록 합니다.
+
+아래 사진을 보면 Chrome의 URL 옆에 자물쇠가 활성화 되어있는 것으로 보아 TLS 인증서가 정상적으로 적용되었다는 것을 알 수 있습니다.
 
 ![](./images/workflows-with-aks-github-slack-3/24.png)
 ![](./images/workflows-with-aks-github-slack-3/25.png)
@@ -255,27 +269,28 @@ TLS 발급 위함과 더불어 도메인으로 ingress에 접근할 수 있도�
 
 ## 결론
 
-수신 경로를 정의한 모든 k8s 요청은 ingress로 그러면 알아서 HTTP 처리와 Load balancing까지 처리하게 됩니다.
+수신 경로를 정의한 요청은 ingress로 전달되며 그러면 알아서 HTTPS 처리와 Load balancing까지 처리됨을 기대할 수 있습니다.
 
 # 네임 스페이스 생성
 
-1
+추후, 사용될 `qa`, `prod` ns를 미리 만들어주도록 합니다.
 
 ![](./images/workflows-with-aks-github-slack-3/27.png)
 
-# 스토리지 클레스 생성
+# 스토리지 클래스 생성 및 pvc 요청
 
-1.  azure files를 위함
+Pod이 죽더라도 정적 자산과 같은 영구적인 데이터 저장하기 위해 azure files을 사용합니다. azure files 스토리지 클래스를 등록 및 pvc를 미리 요청하도록 합니다.
+
+`yaml` 은 [프로젝트에 사용한 YAML](https://github.com/belf-kr/infrastructure-as-code/tree/v0.1.0/storage) 을 참고합니다.
 
 ![](./images/workflows-with-aks-github-slack-3/28.png)
+
+정상적으로 적용된 것을 확인할 수 있습니다.
+
 ![](./images/workflows-with-aks-github-slack-3/29.png)
+
+요청한 용량에 맞게 Azure에서도 조회되는 것을 확인할 수 있습니다.
+
 ![](./images/workflows-with-aks-github-slack-3/30.png)
 
 # 정리
-
-1. aks가이드에 있는 yaml이 레거시라서 모던으로 교체했습니다.
-1. https 활성화
-1. 이메일 주소 변경
-1. 삭제하게 편하게 테스트 컨테이너는 `test` namespace에 배치함
-   1. 주의, service endpoint는 ns에 맞게 설정되므로 ingress의 path도 수정해줘야합니다.
-1. ingress apply시 open된 nginx ip를 입력한 DNS 정보를 기입합니다.
