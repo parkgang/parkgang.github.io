@@ -146,10 +146,19 @@ resource group 이름을 입력하시고 영역을 선택하도록 합니다. �
 
 # k8s cluster 접속
 
-1. azure cli 설치 후 로그인
-2. 클러스터 접속
+AKS가 생성되었으니 이제 k8s에게 명령을 날리기 위해서 `kubectl` 을 사용해야겠죠? 그러기 위해서는 k8s cluster 접속해야 하는데 우선 azure cli에 로그인이 필요합니다.
 
-# DNS 설정
+azure cli가 설치되어있지 않다면 [Azure CLI를 설치하는 방법](https://docs.microsoft.com/ko-kr/cli/azure/install-azure-cli) 를 참고하여 설치 후 로그인 하도록 합니다.
+
+![](./images/workflows-with-aks-github-slack-3/10.png)
+
+AKS 리소스의 연결 버튼을 누르면 친절하게 연결에 필요한 Azure 구독과 AKS 이름에 대한 cli 스니펫이 나옵니다. 복붙해서 k8s cluster 접속하도록 합니다.
+
+![](./images/workflows-with-aks-github-slack-3/11.png)
+
+접속 후 `kubectl get node` 으로 Node를 조회하면 정상적으로 3개가 표시되는 것을 확인할 수 있습니다.
+
+![](./images/workflows-with-aks-github-slack-3/12.png)
 
 # ingress 생성
 
