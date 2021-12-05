@@ -166,11 +166,13 @@ AKS 리소스의 연결 버튼을 누르면 친절하게 연결에 필요한 Azu
 
 [해당 문서](https://docs.microsoft.com/ko-kr/azure/aks/ingress-tls) 를 참고해서 따라하시면 되며 자세한 내용은 공식문서를 참고해주세요.
 
-## 수신 컨트롤러 만들기
+## helm ingress-nginx repository 추가
 
 ingress를 배포할 namespace를 만들고 helm repository에 ingress-nginx를 추가하도록 합니다.
 
 ![](./images/workflows-with-aks-github-slack-3/13.png)
+
+## 수신 컨트롤러 만들기
 
 helm 명령을 사용하여 nginx-ingress 를 설치합니다.
 
@@ -186,7 +188,23 @@ helm 명령을 사용하여 nginx-ingress 를 설치합니다.
 
 ![](./images/workflows-with-aks-github-slack-3/16.png)
 
-# DNS 등록
+## DNS 영역에 A 레코드 추가
+
+1
+
+![](./images/workflows-with-aks-github-slack-3/17.png)
+
+1
+
+![](./images/workflows-with-aks-github-slack-3/18.png)
+
+## cert-manager 설치
+
+## CA 클러스터 발급자 만들기
+
+## 데모 애플리케이션 실행
+
+## 수신 경로 만들기
 
 # 네임 스페이스 생성
 
