@@ -7,12 +7,13 @@ jobs:
   build_gatsby:
     name: build
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        # 종속성 설치 문제가 발생하지 않도록 노드 버전은 14로 픽스
-        node-version: [14.x]
     steps:
       - uses: actions/checkout@v1
+
+      - uses: actions/setup-node@v2
+        with:
+          # 종속성 설치 문제가 발생하지 않도록 노드 버전은 14로 픽스
+          node-version: '14'
 
       - name: yarn install
         run: yarn install
