@@ -293,6 +293,8 @@ Pod이 죽더라도 정적 자산과 같은 영구적인 데이터 저장하기 
 
 ![](./images/workflows-with-aks-github-slack-3/30.png)
 
+> azure files의 StorageClass를 사용하는 pvc의 경우 하나의 스토리지 클래스에 여러게의 파일 공유영역이 생성되는 것을 확인할 수 있습니다.
+
 # 마무리
 
 해당 글을 보고 따라하는 시점에 MS 공식 문서와 azure portal이 많이 바껴있을 수 있어 따라하는데 힘들 수도 있습니다.
