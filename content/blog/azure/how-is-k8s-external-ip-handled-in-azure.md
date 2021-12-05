@@ -8,15 +8,15 @@ draft: false
 
 # Overview
 
-Azure에서 AKS를 사용하면서 문득 이런 궁금증이 생겼다.
+Azure에서 AKS를 사용하면서 문득 이런 궁금증이 생겼습니다.
 
 > ingress를 통해 외부의 트래픽을 받아오는데 ingress IP은 어디서 생성되었으며 어떻게 Load balancing이 되는거지?
 
 > svc를 LoadBalancer으로 생성하는 경우 IP가 생성되는데 어디서 생성된거지? 해당 IP는 어떻게 Load balancing 된다고 장담할 수 있는거지?
 
-Azure에 k8s cluster를 올려놓고 k8s가 하라는대로 `.yaml` 을 적용하니 원하는대로 동작이 되어서 Azure가 핸들링 한건지 k8s가 핸들링한건지 큰 관심을 안가지고 있었는데 AKS 관련 내용을 정리하다가 갑자기 궁금해져서 간단하게 찾아보고 정리하려고 합니다.
+Azure에 k8s cluster를 올려놓고 k8s의 spec에 맞게 `.yaml` 을 적용하면 예상하는 대로 동작이 되어서 Azure가 핸들링 한건지 k8s가 핸들링한건지 큰 관심을 안가지고 있었는데 AKS 관련 내용을 정리하다가 갑자기 궁금해져서 간단하게 찾아보고 정리하려고 합니다.
 
-# 리소스 관련이므로 Azure가 할꺼야
+# 리소스 관련이므로 Azure가 하겠지?
 
 IP 생성이랑 Load balancing 이부분은 리소스를 제공하는 Azure만 핸들링할 수 있다고 생각합니다.
 
@@ -49,7 +49,10 @@ AKS를 생성하면 자동으로 `부하 분산 장치` 라는 리소스가 생�
 | qa            | redis-lb                               | qa 환경 redis 데이터 조회를 팀원도 조회할 수 있도록 외부로 노출하기 위함                       |
 
 > `kubectl get services --all-namespaces`  
-> ![](./images/how-is-k8s-external-ip-handled-in-azure/2.png)
+> ![](./images/how-is-k8s-external-ip-handled-in-azure/2-0.png)
+
+> `부하 분산 장치`  
+> ![](./images/how-is-k8s-external-ip-handled-in-azure/2-1.png)
 
 외부로 노출된 svc는 총 3개인데 위의 리소스 그룹에서는 `공용 IP 주소` 가 4개가 존재하였습니다. 한개는 뭘까요?
 
