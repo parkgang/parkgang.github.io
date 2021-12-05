@@ -1,8 +1,9 @@
 ---
-title: how-is-k8s-external-ip-handled-in-azure
+title: k8s의 EXTERNAL-IP는 Azure에서 어떻게 처리될 까?
 date: 2021-12-06 05:12:84
 category: azure
 thumbnail: { thumbnailSrc }
 draft: false
 ---
 
+null
