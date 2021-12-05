@@ -160,15 +160,33 @@ AKS 리소스의 연결 버튼을 누르면 친절하게 연결에 필요한 Azu
 
 ![](./images/workflows-with-aks-github-slack-3/12.png)
 
-# ingress 생성
+# ingress 생성 (ps. HTTPS 수신 컨트롤러 만들기)
 
-1. [해당 문서를 참고합니다.](https://docs.microsoft.com/ko-kr/azure/aks/ingress-tls)
-1. aks가이드에 있는 yaml이 레거시라서 모던으로 교체했습니다.
-1. https 활성화
-1. 이메일 주소 변경
-1. 삭제하게 편하게 테스트 컨테이너는 `test` namespace에 배치함
-   1. 주의, service endpoint는 ns에 맞게 설정되므로 ingress의 path도 수정해줘야합니다.
-1. ingress apply시 open된 nginx ip를 입력한 DNS 정보를 기입합니다.
+외부의 트래픽을 효과적으로 받기 위해서는 ingress가 필요하겠죠? 여기서는 Azure에서 가이드하는 `HTTPS 수신 컨트롤러` 를 사용할 것 입니다.
+
+[해당 문서](https://docs.microsoft.com/ko-kr/azure/aks/ingress-tls) 를 참고해서 따라하시면 되며 자세한 내용은 공식문서를 참고해주세요.
+
+## 수신 컨트롤러 만들기
+
+ingress를 배포할 namespace를 만들고 helm repository에 ingress-nginx를 추가하도록 합니다.
+
+![](./images/workflows-with-aks-github-slack-3/13.png)
+
+helm 명령을 사용하여 nginx-ingress 를 설치합니다.
+
+![](./images/workflows-with-aks-github-slack-3/14.png)
+
+공식 문서 발췌: 설치하는 동안 Azure 공용 IP 주소가 수신 컨트롤러에 대해 생성됩니다. 이 공용 IP 주소는 수신 컨트롤러의 수명 동안만 고정됩니다.
+
+`kubectl get all -n ingress-basic` 으로 조회해보면 외부로 나가는 IP가 생성된 것을 확인할 수 있습니다.
+
+![](./images/workflows-with-aks-github-slack-3/15.png)
+
+해당 IP 주소로 이동하면 아직 수신 규칙은 생성되지 않았기 때문에 NGINX 수신 컨트롤러의 기본 404 페이지가 표시되는 것을 확인할 수 있으며 이를 통해 정상적으로 ingress가 배포된 것을 확인할 수 있습니다.
+
+![](./images/workflows-with-aks-github-slack-3/16.png)
+
+# DNS 등록
 
 # 네임 스페이스 생성
 
@@ -177,3 +195,10 @@ AKS 리소스의 연결 버튼을 누르면 친절하게 연결에 필요한 Azu
 1.  azure files를 위함
 
 # 정리
+
+1. aks가이드에 있는 yaml이 레거시라서 모던으로 교체했습니다.
+1. https 활성화
+1. 이메일 주소 변경
+1. 삭제하게 편하게 테스트 컨테이너는 `test` namespace에 배치함
+   1. 주의, service endpoint는 ns에 맞게 설정되므로 ingress의 path도 수정해줘야합니다.
+1. ingress apply시 open된 nginx ip를 입력한 DNS 정보를 기입합니다.
