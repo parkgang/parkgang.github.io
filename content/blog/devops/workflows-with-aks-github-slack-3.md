@@ -119,7 +119,7 @@ resource group 이름을 입력하시고 영역을 선택하도록 합니다. �
 
 ![](./images/workflows-with-aks-github-slack-3/7.png)
 
-네번째 step은 네트워킹 입니다. 여기서는 `HTTP 애플리케이션 라우팅 사용` 체크 이외에는 모두 기본 값을 사용하도록 헸습니다.
+네번째 step은 네트워킹 입니다. 여기서는 `HTTP 애플리케이션 라우팅 사용` 체크 이외에는 모두 기본 값을 사용하도록 했습니다.
 
 > `HTTP 애플리케이션 라우팅` 이란?  
 > 쉽게 말해서 DNS 영역을 생성해주고 Ingress에 등록되는 도메인을 자동으로 Azure DNS 영역의 레코드에 추가/삭제 해주는 것 입니다.
@@ -134,8 +134,15 @@ resource group 이름을 입력하시고 영역을 선택하도록 합니다. �
 
 ![](./images/workflows-with-aks-github-slack-3/8.png)
 
-2. Azure Monitor 사용 안함 (돈이 많이 들어감)
-3. 이외의 값은 동적으로 변경이 가능함
+네번째 step은 통합 입니다. 여기서는 `Azure Monitor` 의 기능을 `사용 안 함` 이외에는 모두 기본 값을 사용하도록 했습니다.
+
+> 이전에 스터디 당시 `Azure Monitor` 기본 값인 사용으로 설정하고 테스트한 결과 비용이 많이 청구되어서 사용하지 않게 되었습니다.
+
+> 컨테이너 레지스트리의 경우 추후 이어질 섹션에서 소개하겠지만 GitHub Container Registry를 사용할 것 이기 때문에 ACR은 사용하지 않을 것 입니다.
+
+![](./images/workflows-with-aks-github-slack-3/9.png)
+
+이렇게 AKS를 만들기 위해서 필요한 설정을 모두 완료하였습니다. 이제 `검토 + 만들기` 버튼을 통하여 AKS를 만들고 오세요!
 
 # k8s cluster 접속
 
