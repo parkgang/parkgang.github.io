@@ -190,11 +190,28 @@ helm 명령을 사용하여 nginx-ingress 를 설치합니다.
 
 ## DNS 영역에 A 레코드 추가
 
-1
+TLS 발급 위함과 더불어 도메인으로 ingress에 접근할 수 있도록 NGINX 서비스의 외부 IP 주소를 DNS 영역의 A 레코드에 추가합니다.
+
+추후, ingress 수신 경로에 어떤 서브도메인이 올지 모름으로 모든 서브도메인을 받을 수 있도록 `*` 으로 설정하도록 합니다.
 
 ![](./images/workflows-with-aks-github-slack-3/17.png)
 
-1
+> 만약, 여기서 다른 DNS가 있다면? 해당 영역의 A 레코드에 추가해주면 됩니다. 핵심은 도메인으로 질의했을 때 ingress IP가 리졸빙되면 됩니다.
+>
+> <details>
+> <summary>► 다른 DNS에 어떻게 추가되었는지 구경하기</summary>
+>
+> ![](./images/workflows-with-aks-github-slack-3/17-1.png)
+>
+> ![](./images/workflows-with-aks-github-slack-3/17-2.png)
+>
+> ![](./images/workflows-with-aks-github-slack-3/17-3.png)
+>
+> </details>
+
+테스트를 위하여 서브도메인으로 `test` 를 넣어서 질의한 결과 등록한 IP가 정상적으로 조회되는 것을 확인할 수 있습니다.
+
+앞으로 해당 도메인에 서브도메인이 붙던 경로가 추가되던 요청하면 ingress IP가 떨어질 것이고 요청은 모두 NGINX으로 들어가서 알아서 Load balancing 되고 최초로 요청한 도메인과 수신 경로를 비교하여 k8s의 svc와 바인딩 해줄 것 입니다.
 
 ![](./images/workflows-with-aks-github-slack-3/18.png)
 
@@ -205,6 +222,8 @@ helm 명령을 사용하여 nginx-ingress 를 설치합니다.
 ## 데모 애플리케이션 실행
 
 ## 수신 경로 만들기
+
+> 결론적으로 수신 경로를 정의한 모든 k8s 요청은 ingress로 그러면 알아서 HTTP 처리와 Load balancing까지 해줌
 
 # 네임 스페이스 생성
 
