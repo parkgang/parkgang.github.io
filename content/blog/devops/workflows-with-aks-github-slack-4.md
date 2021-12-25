@@ -85,11 +85,13 @@ teams 생성 후 `Add a member` 을 통하여 팀원을 초대하도록 합니�
 
 ![](./images/workflows-with-aks-github-slack-4/7.png)
 
-## 필수 리뷰어 지정
+## Code 작성
 
 이후 생성된 repo에 제품이 실행되어 테스트할 수 있는 간단한 Code를 작성하도록 합니다.
 
 > 저는 `create-next-app` 를 이용하여 Boilerplate Code를 사용하였습니다.
+
+## 필수 리뷰어 지정
 
 이전에 [2편](/devops/workflows-with-aks-github-slack-2) 에서 작성된 [워크플로우는](/devops/workflows-with-aks-github-slack-2/#워크플로우는) 내용을 보시면
 
@@ -114,6 +116,8 @@ teams 생성 후 `Add a member` 을 통하여 팀원을 초대하도록 합니�
    1. 사용자에게 필수적으로 승인받아야한다.
 
 > 햇갈리면 이미 작성된 [front-server](https://github.com/belf-kr/front-server/blob/main/.github/CODEOWNERS) 를 참고하세요!
+
+> Team 단위로 기본 리뷰어를 설정해야합니다.
 
 ## Branch 보호 규칙 설정
 
@@ -184,7 +188,15 @@ repo → settings → options 으로 들어가셔서 Merge 설정도 추가적�
 
 ![](./images/workflows-with-aks-github-slack-4/13.png)
 
+repo를 추가하고 `Write` 권한으로 변경하도록 합니다.
+
+> 그래야 일반 팀원은 필수 리뷰어를 거치도록 디자인됩니다.
+
 ![](./images/workflows-with-aks-github-slack-4/14.png)
+
+# 이외
+
+DB 접속 정보과 같이 보안상 중요한 값들은 GitHub Secrets을 사용하도록 하면 됩니다.
 
 # 마무리
 

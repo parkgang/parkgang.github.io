@@ -20,6 +20,22 @@ draft: false
 
 # Hi
 
+````
+6. 빌드 후 컨테이너 레지스터리로 push
+   1. 깃허브 컨테이너 레지스터 token 확보
+   1. 컨테이너 레지스터리 기본 값을 public으로 설정합니다.
+      1. 버그인지는 모르겠지만 public으로 바꿔 계속 private가 기본으로 설정됩니다.
+   1. 빌드 명령어
+      > 이미지 이름에 `.`은 사용하지 않습니다. (사진을 첨부하고) 깃허브에서 정상적으로 페이지를 불러오지 못합니다.
+      ```shell
+      docker build -t ghcr.io/belf-kr/front-server/nextjs:v0.1.0 .
+      docker push ghcr.io/belf-kr/front-server/nextjs:v0.1.0
+      ```
+7. k8s에서 ingress와 함께 정상적으로 동작하는지 확인
+   1. k8s를 위한 yaml 작성
+   1. apply 후 ingress에 달아서 접속 테스트
+````
+
 1. 전략
    1. 환경 별로 ns 이외 yaml이 비슷하더리도 나중에 추가 설정이 들어갈 경우 의존이 생기므로 비슷해도 따로 만드는게 전략적으로 좋습니다.
    1. 같은 이미지는 배포해도 업데이트가 되지 않습니다
