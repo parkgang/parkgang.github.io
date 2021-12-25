@@ -139,11 +139,25 @@ repo → settings → branches 으로 들어가셔서 설정하면 됩니다.
 
 하지만 github의 `rebase merging` 는 제가 기대하는 대로 동작하지 않았습니다. 혹시라도 내가 git을 잘못 이해하고 사용하는 것은 아닌지 local에서도 테스트 해보고 다른 git host service에서도 테스트 해봤지만 결론은 github가 이상하게 동작한다는 것으로 나왔습니다.
 
-| step | github                                                  | azure devops                                            |
-| ---- | ------------------------------------------------------- | ------------------------------------------------------- |
-| 1    | ![](./images/workflows-with-aks-github-slack-4/9-3.png) | ![](./images/workflows-with-aks-github-slack-4/9-6.png) |
-| 2    | ![](./images/workflows-with-aks-github-slack-4/9-4.png) | ![](./images/workflows-with-aks-github-slack-4/9-7.png) |
-| 3    | ![](./images/workflows-with-aks-github-slack-4/9-5.png) | ![](./images/workflows-with-aks-github-slack-4/9-8.png) |
+| step                                | github                                                  | azure devops                                            |
+| ----------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
+| `develop` 생성 후 commit            | ![](./images/workflows-with-aks-github-slack-4/9-3.png) | ![](./images/workflows-with-aks-github-slack-4/9-6.png) |
+| `main` from `develop` 으로 `rebase` | ![](./images/workflows-with-aks-github-slack-4/9-4.png) | ![](./images/workflows-with-aks-github-slack-4/9-7.png) |
+| `rebase` 된 `develop` 에서 commit   | ![](./images/workflows-with-aks-github-slack-4/9-5.png) | ![](./images/workflows-with-aks-github-slack-4/9-8.png) |
+
+> 위의 테스트는 동일한 repo 이름, 동일한 commit 내용 및 message으로 진행되었습니다.
+
+위의 사진을 보면 github에서 `rebase` 시 commit은 `main` 으로 잘 `rebase` 되었지만 `develop` 는 HEAD가 이동되지 않고 이전 `main` 에서 분기된 것처럼 보이는 것을 확인할 수 있습니다. 무시하고 `develop` 에서 추가 commit 시 git graph가 이상해지는 것을 확인할 수 있으며 이상태로 PR시 충돌이 발생합니다.
+
+> 왜냐면 `develop` commit 중 `add: 기능1`, `add: 기능2` 는 이미 `main` 에 있는데 `develop` 분기가 이전 `main` 에서 시작된 것으로 나오므로 PR시 `add: 기능1`, `add: 기능2`, `add: 기능3`, `add: 기능4` 를 모두 끌어오기 때문입니다.
+
+그 반대로 azure devops는 예상한 대로 `rebase` 시 commit도 잘 반영되고 무엇보다 `develop` 가 `rebase` 된 `main` 으로 부터 새롭게 분기가 시작되는 것을 확인할 수 있습니다.
+
+왜 github의 `rebase` 가 위와 같이 동작하는지는 이유를 찾지 못하였습니다. github가 버그라서 저렇게 동작한다? 라는 것은 말이 안되는거 같고 github는 `rebase` 위와 같이 동작하는게 정상이라고 생각해야되는 건지... **혹시라고 이유를 아시는 분은 답변 주시면 정말 감사하겠습니다.**
+
+무튼, 이러한 이유로 `develop` 는 `rebase` 되더라도 `develop` 를 자동으로 삭제하도록 만들고 엔지니어가 다시 `develop` 를 생성하는 방향으로 해결하였습니다. 이 때문에 `develop` 는 삭제를 허용하는 것 입니다.
+
+> `rebase` 후 `develop` 를 새롭게 다시 만들면 분기가 새롭게 시작하기 때문에 문제가 해결되거든요!
 
 ## Merge Settings
 
