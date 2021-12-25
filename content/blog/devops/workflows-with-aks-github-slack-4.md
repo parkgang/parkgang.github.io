@@ -139,6 +139,12 @@ repo → settings → branches 으로 들어가셔서 설정하면 됩니다.
 
 하지만 github의 `rebase merging` 는 제가 기대하는 대로 동작하지 않았습니다. 혹시라도 내가 git을 잘못 이해하고 사용하는 것은 아닌지 local에서도 테스트 해보고 다른 git host service에서도 테스트 해봤지만 결론은 github가 이상하게 동작한다는 것으로 나왔습니다.
 
+| step | github                                                  | azure devops                                            |
+| ---- | ------------------------------------------------------- | ------------------------------------------------------- |
+| 1    | ![](./images/workflows-with-aks-github-slack-4/9-3.png) | ![](./images/workflows-with-aks-github-slack-4/9-6.png) |
+| 2    | ![](./images/workflows-with-aks-github-slack-4/9-4.png) | ![](./images/workflows-with-aks-github-slack-4/9-7.png) |
+| 3    | ![](./images/workflows-with-aks-github-slack-4/9-5.png) | ![](./images/workflows-with-aks-github-slack-4/9-8.png) |
+
 ## Merge Settings
 
 1. `Allow squash merging` 활성화
