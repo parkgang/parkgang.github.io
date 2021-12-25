@@ -165,14 +165,20 @@ repo → settings → branches 으로 들어가셔서 설정하면 됩니다.
 
 ## Merge Settings
 
+repo → settings → options 으로 들어가셔서 Merge 설정도 추가적으로 하도록 합니다.
+
 1. `Allow squash merging` 활성화
+   1. `develop` from `feature` 시 사용하기 위해서
 1. `Allow rebase merging` 활성화
+   1. `main` from `develop` 시 사용하기 위해서
 1. `Automatically delete head branches` 활성화
-1. 왜 squash, rebase 사용하게 됬는지 설명 및 git graph 첨부
+   1. `feature`, `develop` merge시 branch가 자동으로 삭제될 수 있도록
 
 ![](./images/workflows-with-aks-github-slack-4/11.png)
 
-# teams에 repositories 추가
+# Teams에 repositories 추가
+
+생성된 repo에 팀원들이 Access 할 수 있도록 추가하도록 합니다.
 
 ![](./images/workflows-with-aks-github-slack-4/12.png)
 
@@ -181,3 +187,13 @@ repo → settings → branches 으로 들어가셔서 설정하면 됩니다.
 ![](./images/workflows-with-aks-github-slack-4/14.png)
 
 # 마무리
+
+github의 정책에 대해 설정을 모두 완료하였습니다. 👏
+
+이와 같은 정책이 없어도 개발은 할 수 있을 것 입니다. 하지만 Human Error를 무시할 수 없기 때문에 System level으로 정책으로 미리 방지하는 것은 기본입니다.
+
+> 실제로 PR 필수 리뷰어와 같은 정책으로 사고를 방지한 적이 꽤 있었습니다.
+
+이제 함부로 코드를 수정할 수 없도록 설정까지 완료했으니 남은 작업은 자동화 부분이 남았네요
+
+끝까지 읽어주셔서 감사합니다 :) 다음 챕터에서 뵈요~
