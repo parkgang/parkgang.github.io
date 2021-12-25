@@ -34,3 +34,5 @@ draft: false
 1. `qa` 라는 네임스페이스라고 붙인게 아쉽다.
    1. 실제 qa 인력이 없는데 굳이 `qa` 라는 네임스페이스가 맞았던걸 까?
    2. 차란히 `stage` 위딩이 더 올바른 표현이라고 생각들었습니다.
+
+![](./images/workflows-with-aks-github-slack-7/1.png)
