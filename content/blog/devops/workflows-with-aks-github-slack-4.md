@@ -159,14 +159,16 @@ repo → settings → branches 으로 들어가셔서 설정하면 됩니다.
 
 > `rebase` 후 `develop` 를 새롭게 다시 만들면 분기가 새롭게 시작하기 때문에 문제가 해결되거든요!
 
+아래와 같이 보호가 적용되는 branch는 자물쇠 아이콘이 표시되는 것을 확인할 수 있습니다.
+
+![](./images/workflows-with-aks-github-slack-4/10.png)
+
 ## Merge Settings
 
 1. `Allow squash merging` 활성화
 1. `Allow rebase merging` 활성화
 1. `Automatically delete head branches` 활성화
 1. 왜 squash, rebase 사용하게 됬는지 설명 및 git graph 첨부
-
-![](./images/workflows-with-aks-github-slack-4/10.png)
 
 ![](./images/workflows-with-aks-github-slack-4/11.png)
 
