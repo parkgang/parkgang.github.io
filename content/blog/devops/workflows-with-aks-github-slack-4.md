@@ -117,7 +117,27 @@ teams 생성 후 `Add a member` 을 통하여 팀원을 초대하도록 합니�
 
 ## Branch 보호 규칙 설정
 
-![](./images/workflows-with-aks-github-slack-4/9.png)
+이제 함부로 branch를 건드릴 수 없도록 보호 규칙을 설정할 것 입니다. 관리하는 branch는 `main` 과 `develop` 이므로 이 2개에 대해서 설정하면 됩니다.
+
+repo → settings → branches 으로 들어가셔서 설정하면 됩니다.
+
+![](./images/workflows-with-aks-github-slack-4/9-0.png)
+
+설정된 규칙의 경우 아래와 같습니다.
+
+| main                                                    | develop                                                 |
+| ------------------------------------------------------- | ------------------------------------------------------- |
+| ![](./images/workflows-with-aks-github-slack-4/9-1.png) | ![](./images/workflows-with-aks-github-slack-4/9-2.png) |
+
+공통적으로 반드시 PR을 통해서만 merge되도록, PR은 필수 리뷰어가 승인해야된다는 내용입니다.
+
+근데 `develop` 의 경우 `Allow deletions` 라는 옵션이 활성화 되어있는 것을 확인할 수 있습니다. `develop` 는 삭제되지 않고 계속 유지되면서 개발되어 나가야 하는데 왜 이렇게 됐을까요? 여기에서는 비하인드 스토리가 있습니다.
+
+`main` from `develop` PR의 경우 `rebase merging` 를 통하여 마지막 `main` 으로 HEAD가 이동되는 것이 명확합니다. 왜냐면 `develop` 이 `main` 으로 merge된 것은 `prod` 으로 release된 것을 의미하고 이후 `develop` 은 release된 <u>`main` 으로 부터 다시 시작</u>하는 것이기 때문입니다.
+
+> git graph가 명확한 것도 있고요
+
+하지만 github의 `rebase merging` 는 제가 기대하는 대로 동작하지 않았습니다. 혹시라도 내가 git을 잘못 이해하고 사용하는 것은 아닌지 local에서도 테스트 해보고 다른 git host service에서도 테스트 해봤지만 결론은 github가 이상하게 동작한다는 것으로 나왔습니다.
 
 ## Merge Settings
 
