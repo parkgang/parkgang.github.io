@@ -28,29 +28,35 @@ draft: false
 
 ## Organizations 만들기
 
-> 1
+![](./images/workflows-with-aks-github-slack-4/1.png)
 
 ## Organizations 정책 설정
 
-> 6, 7
+![](./images/workflows-with-aks-github-slack-4/2.png)
+
+![](./images/workflows-with-aks-github-slack-4/3.png)
 
 ## Teams 생성 및 Members 추가
 
-> 2, 3, 4
+![](./images/workflows-with-aks-github-slack-4/4.png)
+
+![](./images/workflows-with-aks-github-slack-4/5.png)
+
+![](./images/workflows-with-aks-github-slack-4/6.png)
 
 # Repositories 설정
 
 ## Repositories 생성
 
-> 5
+![](./images/workflows-with-aks-github-slack-4/7.png)
 
 ## 필수 리뷰어 지정
 
-> 9
+![](./images/workflows-with-aks-github-slack-4/8.png)
 
 ## Branch 보호 규칙 설정
 
-> 8
+![](./images/workflows-with-aks-github-slack-4/9.png)
 
 ## Merge Settings
 
@@ -59,10 +65,16 @@ draft: false
 1. `Automatically delete head branches` 활성화
 1. 왜 squash, rebase 사용하게 됬는지 설명 및 git graph 첨부
 
-> 13, 14
+![](./images/workflows-with-aks-github-slack-4/10.png)
+
+![](./images/workflows-with-aks-github-slack-4/11.png)
 
 # teams에 repositories 추가
 
-> 10, 11, 12
+![](./images/workflows-with-aks-github-slack-4/12.png)
+
+![](./images/workflows-with-aks-github-slack-4/13.png)
+
+![](./images/workflows-with-aks-github-slack-4/14.png)
 
 # 마무리
