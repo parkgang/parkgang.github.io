@@ -45,7 +45,7 @@ CI/CD Service는 Github Action을 사용할 것입니다.
 
 또한, 아래의 yaml은 배포 환경에 맞게 `Dockerfile` 을 따로 정의해서 돌아가도록 되어있습니다. 즉, 중요한 것은 yaml 내용을 이해하는 것이며 여기서는 큰 틀에서 돌아가는 step에 대해 설명하도록 하겠습니다.
 
-> 아래의 yaml은 [front-server - aks-qa-deploy.yaml](https://github.com/belf-kr/front-server/blob/main/.github/workflows/aks-qa-deploy.yaml) 의 내용이며 해당 yaml 이외 pvc를 사용하는 case도 [storage-service - aks-qa-deploy.yaml](https://github.com/belf-kr/storage-service/blob/main/.github/workflows/aks-qa-deploy.yaml) 에 존재합니다. 이외 `prod` yaml도 구경해보세요!
+> 아래의 yaml은 [front-server@v1.2.0 - aks-qa-deploy.yaml](https://github.com/belf-kr/front-server/blob/v1.2.0/.github/workflows/aks-qa-deploy.yaml) 의 내용이며 해당 yaml 이외 pvc를 사용하는 case도 [storage-service@v1.1.0 - aks-qa-deploy.yaml](https://github.com/belf-kr/storage-service/blob/v1.1.0/.github/workflows/aks-qa-deploy.yaml) 에 존재합니다. 이외 `prod` yaml도 구경해보세요!
 
 ### steps
 
