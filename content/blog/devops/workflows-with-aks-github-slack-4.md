@@ -59,9 +59,15 @@ AKS가 권한 문제 없이 image을 pull 받을 수 있도록 모든 package(im
 
 ## Teams 생성 및 Members 추가
 
+이제 org를 만들었으니 org에서 팀원의 액세스 수준을 유연하게 설정하기 위하여 teams을 생성하도록 합니다.
+
+생성 방법은 전혀 어렵지 않으니 아래의 사진을 참고해서 생성하도록 합니다.
+
 ![](./images/workflows-with-aks-github-slack-4/4.png)
 
 ![](./images/workflows-with-aks-github-slack-4/5.png)
+
+teams 생성 후 `Add a member` 을 통하여 팀원을 초대하도록 합니다.
 
 ![](./images/workflows-with-aks-github-slack-4/6.png)
 
