@@ -18,4 +18,22 @@ draft: false
 | `6편` | [github action](/devops/workflows-with-aks-github-slack-6) |
 | 7편   | [회고](/devops/workflows-with-aks-github-slack-7)          |
 
-# Hi
+# Overview
+
+# Github Action
+
+## 배포 정책
+
+## yaml
+
+# Github Organizations Secrets
+
+## Github Container Registry Token
+
+## Azure Credentials
+
+## Slack Webhook URL
+
+# CI/CD 테스트
+
+# 마무리
