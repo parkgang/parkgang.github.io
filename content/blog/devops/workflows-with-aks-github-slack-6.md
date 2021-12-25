@@ -126,7 +126,24 @@ jobs:
           SLACK_MESSAGE: ${{ github.repository }}가 ${{ env.NAMESPACE }} 환경에 배포되었습니다 🚀
 ```
 
+# 이외 주의사항
+
+## image에 `latest` tag는 사용하지 않습니다.
+
+배포 시 어떤 이미지를 pull 해야하는지 매우 모호하기 때문입니다.
+
+## image 이름에 `.` 은 포함하지 않도록 합니다.
+
+Github에서 정상적으로 페이지를 불러오지 못합니다.
+
+> 아래의 사진은 image 이름을 `front-server/next.js` 으로 설정하고 packages에 들어간 결과 나온 화면입니다.
+> ![](./images/workflows-with-aks-github-slack-6/1-0.png)
+
 # Github Organizations Secrets
+
+위 yaml을 보면 알 수 있지만 Azure 접속 정보와 같은 정보는 secrets으로 관리되고 있는 것을 확인할 수 있습니다.
+
+org에 있는 repo들은 모두 같은 container registry, k8s cluster, slack workspace를 사용하므로 org level에서 secrets을 관리하도록 합니다.
 
 ## Github Container Registry Token
 
