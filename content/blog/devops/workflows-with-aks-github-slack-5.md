@@ -18,11 +18,32 @@ draft: false
 | 6편   | [github action](/devops/workflows-with-aks-github-slack-6) |
 | 7편   | [회고](/devops/workflows-with-aks-github-slack-7)          |
 
-# Hi
+# Overview
 
-1. slack 워크 스페이스 생성
-2. 채널 생성
-3. slack에 github app을 추가하기
-   1. notion의 사진을 인용합니다.
-4. 추가적으로 깃허브에서 필요한 정보만 받도록 수정합니다.
-   1. /github subscribe 명렁어로 수정한 사진을 첨부합니다.
+# slack 워크스페이스 생성
+
+# github app 설정
+
+## 채널 생성
+
+## 워크스페이스에 github app 추가
+
+## GitHub 계정 연결
+
+## Org 연결
+
+## issue 등록 시 알림 테스트
+
+## 필요한 구독만 남기기
+
+# Webhooks 생성
+
+## 채널 생성
+
+## App 생성
+
+## Webhooks 생성
+
+## 테스트
+
+# 마무리
