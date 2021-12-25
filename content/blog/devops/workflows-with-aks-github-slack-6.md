@@ -145,6 +145,8 @@ Github에서 정상적으로 페이지를 불러오지 못합니다.
 
 org에 있는 repo들은 모두 같은 container registry, k8s cluster, slack workspace를 사용하므로 org level에서 secrets을 관리하도록 합니다.
 
+organizations → settings → secrets 으로 들어가셔서 추가하면 됩니다.
+
 ## Github Container Registry Token
 
 Github Container Registry에 접근할 수 있도록 Token을 발급받도록 합니다.
@@ -193,7 +195,7 @@ Azure CLI에 AKS가 있는 Azure 계정으로 로그인하여 `az ad sp create-f
 ![](./images/workflows-with-aks-github-slack-6/12.png)
 
 > 혹시라도 CI/CD에서 image pull fail이 발생한다면 해당 image가 public로 설정되어있는지 확인해보세요.
-> Github Container Registry 버그인지는 모르겠지만 org level에서 `public` 으로 설정하더라도 처음 publish된 image의 경우 `private` 이 기본으로 설정됩니다.
+> Github Container Registry 버그인지는 모르겠지만 org level에서 `public` 으로 설정하더라도 처음 publish된 image의 경우 `private` 이 기본으로 설정되어 발생한 문제일 수 있습니다.
 
 # 마무리
 
