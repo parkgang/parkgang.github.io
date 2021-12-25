@@ -147,15 +147,21 @@ org에 있는 repo들은 모두 같은 container registry, k8s cluster, slack wo
 
 ## Github Container Registry Token
 
+Github Container Registry에 접근할 수 있도록 Token을 발급받도록 합니다.
+
 ![](./images/workflows-with-aks-github-slack-6/1-1.png)
 
 ![](./images/workflows-with-aks-github-slack-6/2.png)
 
 ## Azure Credentials
 
+Azure CLI에 AKS가 있는 Azure 계정으로 로그인하여 `az ad sp create-for-rbac --sdk-auth` 으로 creds 발급 후 내용을 삽입하도록 합니다.
+
 ![](./images/workflows-with-aks-github-slack-6/3.png)
 
 ![](./images/workflows-with-aks-github-slack-6/4.png)
+
+이외 AKS가 존재하는 리소스 그룹 이름과 AKS 이름도 삽입하도록 합니다.
 
 ![](./images/workflows-with-aks-github-slack-6/5.png)
 
@@ -165,18 +171,34 @@ org에 있는 repo들은 모두 같은 container registry, k8s cluster, slack wo
 
 ## Slack Webhook URL
 
+[이전 섹션](/devops/workflows-with-aks-github-slack-5/#webhooks-생성) 에서 생성한 Slack Webhook URL도 삽입하도록 합니다.
+
 ![](./images/workflows-with-aks-github-slack-6/8.png)
 
 ![](./images/workflows-with-aks-github-slack-6/9.png)
 
 ## 최종
 
+모두 추가된 secrets의 경우 아래와 같습니다.
+
 ![](./images/workflows-with-aks-github-slack-6/10.png)
 
-![](./images/workflows-with-aks-github-slack-6/11.png)
+> 참고로 repo의 secrets에서도 org에서 추가된 secrets의 종류를 구경할 수 있습니다.
+> ![](./images/workflows-with-aks-github-slack-6/11.png)
 
 # CI/CD 테스트
 
+이제 개발 프로세스에 맞게 CI/CD가 정상적으로 trigger 되는지, aks에 정상적으로 배포되었는지 확인하도록 합니다.
+
 ![](./images/workflows-with-aks-github-slack-6/12.png)
 
+> 혹시라도 CI/CD에서 image pull fail이 발생한다면 해당 image가 public로 설정되어있는지 확인해보세요.
+> Github Container Registry 버그인지는 모르겠지만 org level에서 `public` 으로 설정하더라도 처음 publish된 image의 경우 `private` 이 기본으로 설정됩니다.
+
 # 마무리
+
+워후 🙌 이렇게 자동화된 워크 플로우 구축을 모두 완료했습니다~~ 🥳
+
+여기까지 따라오시느라 고생하셨습니다. 워크 플로우 구축 후기 및 회고는 다음 챕터에서 나눠보도록 하겠습니다.
+
+끝까지 읽어주셔서 감사합니다 :) 다음 챕터에서 봬요~
