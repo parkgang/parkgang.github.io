@@ -147,10 +147,36 @@ org에 있는 repo들은 모두 같은 container registry, k8s cluster, slack wo
 
 ## Github Container Registry Token
 
+![](./images/workflows-with-aks-github-slack-6/1-1.png)
+
+![](./images/workflows-with-aks-github-slack-6/2.png)
+
 ## Azure Credentials
+
+![](./images/workflows-with-aks-github-slack-6/3.png)
+
+![](./images/workflows-with-aks-github-slack-6/4.png)
+
+![](./images/workflows-with-aks-github-slack-6/5.png)
+
+![](./images/workflows-with-aks-github-slack-6/6.png)
+
+![](./images/workflows-with-aks-github-slack-6/7.png)
 
 ## Slack Webhook URL
 
+![](./images/workflows-with-aks-github-slack-6/8.png)
+
+![](./images/workflows-with-aks-github-slack-6/9.png)
+
+## 최종
+
+![](./images/workflows-with-aks-github-slack-6/10.png)
+
+![](./images/workflows-with-aks-github-slack-6/11.png)
+
 # CI/CD 테스트
+
+![](./images/workflows-with-aks-github-slack-6/12.png)
 
 # 마무리
