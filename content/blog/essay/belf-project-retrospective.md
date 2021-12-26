@@ -8,7 +8,7 @@ draft: false
 
 # Preview
 
-|                                                 |                                                |
+| Mobile                                          | PCㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ                       |
 | ----------------------------------------------- | ---------------------------------------------- |
 | ![](./images/belf-project-retrospective/1.jpeg) | ![](./images/belf-project-retrospective/2.png) |
 
