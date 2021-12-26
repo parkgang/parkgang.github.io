@@ -24,7 +24,7 @@ draft: false
 
 > 관련 내용이 여러 군대로 파편화되어 링크로 제공되었습니다. 😂
 
-1. [소개](https://github.com/belf-kr)
+1. [소개](https://github.com/belf-kr/.github/blob/main/profile/README.md)
 1. [project github](https://github.com/belf-kr)
 1. [팀원](https://parkgang.notion.site/6de1a3d7002f4a46ab713e7d6846c490?v=52125eaffbf24e9ca82114b4c2441c80)
 1. [서비스 사용 매뉴얼](https://parkgang.notion.site/36f01d56dff643dfa1db264e33f18d7d)
