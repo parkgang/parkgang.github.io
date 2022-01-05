@@ -31,10 +31,11 @@ JS/TS의 node 계열을 좋아합니다.
 
 친구들의 LOL tier 한눈에 볼 수 있는 서비스 이에요!
 
-## [belf](https://github.com/belf-kr)
-
-사용자의 코스를 공유하는 Todo 서비스를 만들고 있어요!
-
 ## [modern-board](https://github.com/parkgang/modern-board)
 
-일반적인 게시판 웹 앱이며 Microsoft Teams 룩앤필에 맞게 개발하고 있어요!
+일반적인 게시판 웹 앱이며 Microsoft Teams 룩앤필에 맞게 개발해봤어요!  
+직접 만든 [react-with-gin-boilerplate](https://github.com/parkgang/react-with-gin-boilerplate) 기반으로 제작하였으며 카카오 로그인, 회원가입과 같은 간단한 기능을 적용해보았어요.
+
+## [belf](https://github.com/belf-kr)
+
+사용자의 코스를 공유하는 Todo 서비스를 MSA으로 만들었어요!
