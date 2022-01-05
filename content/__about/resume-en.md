@@ -38,4 +38,4 @@ JS/TS의 node 계열을 좋아합니다.
 
 ## [belf](https://github.com/belf-kr)
 
-사용자의 코스를 공유하는 Todo 서비스를 MSA으로 만들었어요!
+사용자의 코스를 공유하는 Todo 서비스이며 MSA으로 만들어봤어요!
