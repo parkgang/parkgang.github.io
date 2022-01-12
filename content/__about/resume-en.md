@@ -12,10 +12,10 @@ lang: 'en'
 
 JS/TS의 node 계열을 좋아합니다.
 
-1. `front-end` 의 경우 react를 이용하여 제작이 가능하며
-1. `back-end` 의 경우 TS, c#, golang을 사용할 수 있으며
+1. `Front-end` 의 경우 React를 이용하여 제작이 가능하며
+1. `Back-end` 의 경우 TS, C#, Go을 사용할 수 있으며
 1. `CI/CD` 의 경우 Azure Devops, Jenkins, Github Action으로 pipeline를 구축해 보았으며
-1. `인프라` 의 경우 클라우드는 Azure 기반으로 k8s를 사용한 경험이 있습니다.
+1. `Infra` 의 경우 클라우드는 Azure 기반으로 k8s를 사용한 경험이 있습니다.
 
 작게나마 애자일 조직에서 일한 경험이 있습니다.
 
