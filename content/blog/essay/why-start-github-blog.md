@@ -1,10 +1,14 @@
 ---
 title: 깃허브 블로그 시작 이유
-date: 2022-01-13 00:01:55
+date: 2021-05-06 02:05:10
 category: essay
 thumbnail: { thumbnailSrc }
 draft: false
 ---
+
+# Intro
+
+깃허브 블로그 첫 포스트로 왜 깃허브 블로그를 사용하게 되었는지 소개하도록 하겠습니다.
 
 # 이전의 나는?
 
