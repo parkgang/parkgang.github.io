@@ -6,6 +6,14 @@ thumbnail: { thumbnailSrc }
 draft: false
 ---
 
-# 작성 내용
+# TL;DR
+
+1. front end 엔지니어로써
+1. 첫 제품 제작
+1. 졸작 최우수상
+1. 대학교 졸업
+1. 병특
+
+# Intro
 
 SRE 및 운영과 관련된 로깅 경험 추가
