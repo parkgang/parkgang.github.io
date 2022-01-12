@@ -4,7 +4,7 @@ date: 2019-1-27 16:21:13
 lang: 'en'
 ---
 
-# 박경은 (Park Kyung Eun)
+# 박경은 (Kyungeun Park)
 
 기술을 이해하고 문제 해결하는 것을 즐기는 개발자입니다.
 

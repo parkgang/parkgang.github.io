@@ -5,11 +5,11 @@ module.exports = {
   introduction: `Software Engineer, 시스템 적인 환경을 좋아하는 개발자`,
   siteUrl: `https://parkgang.github.io/`, // Your blog site url
   social: {
-    twitter: ``, // Your Twitter account
+    twitter: `parkgangeun`, // Your Twitter account
     github: `parkgang`, // Your GitHub account
     medium: ``, // Your Medium account
     facebook: ``, // Your Facebook account
-    linkedin: ``, // Your LinkedIn account
+    linkedin: `kyungeun-park-54722722a`, // Your LinkedIn account
     instagram: ``, // Your Instagram account
   },
   icon: `content/assets/felog.png`, // Add your favicon
