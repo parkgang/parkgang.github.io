@@ -6,6 +6,10 @@ thumbnail: { thumbnailSrc }
 draft: false
 ---
 
+![](./images/2021-retrospective/1.png)
+
+![](./images/2021-retrospective/2.png)
+
 # TL;DR
 
 1. front end 엔지니어로써
