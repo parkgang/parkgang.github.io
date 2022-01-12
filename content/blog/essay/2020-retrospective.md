@@ -27,7 +27,7 @@ draft: false
 
 이때부터 이전부터 봐왔던 notion을 공부해서 알게 된 지식을 모두 정리하기 시작하였습니다.
 
-![](./images/why-start-github-blog/1.png)
+![](./images/2020-retrospective/1.png)
 
 > 쭉쭉 늘어나는 페이지들...
 
@@ -39,7 +39,7 @@ draft: false
 물론 개발자 실력이 좋다면 그동안 쌓아온 지식을 기반하여 아주 수월하게 트러블 슈팅을 진행할 수 있을 겁니다.  
 하지만 깊은 지식 없이 SW가 `돌아가는 것에 치중` 하여 학습된 상태로 예상 하지 못한 새로운 이슈를 만난다면 당황스럽고 사전에 같은 문제를 고민한 글에 의존하게 됩니다.
 
-![](./images/why-start-github-blog/2.png)
+![](./images/2020-retrospective/2.png)
 
 저는 각 토픽에 맞게 트러블 슈팅 내용을 notion에 기록하고 있었습니다.
 
@@ -69,7 +69,7 @@ notion에 작성할 때 아래의 Side effects를 고민하고 있던 시절이�
 
 비록 2021 2분기 이지만 이전 기록에 대해 짧게 회고를 해보려고 합니다.
 
-![](./images/why-start-github-blog/3.png)
+![](./images/2020-retrospective/3.png)
 
 확인해보니 front에 관련된 지식이 없어서 해당 위주로 공부하다가 끝나버렸네요...?
 
