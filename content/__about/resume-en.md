@@ -8,24 +8,30 @@ lang: 'en'
 
 기술을 이해하고 문제 해결하는 것을 즐기는 개발자입니다.
 
-전체적인 워크로드를 파악하고 시스템적으로 개발하는 것을 좋아합니다. 그러면서 자연스럽게 Devops 포지션에 관심이 많습니다.
+전체적인 워크로드를 파악하고 시스템화 하는 것을 좋아합니다.  
+그러면서 자연스럽게 DevOps 포지션에 관심이 많습니다.
 
-JS/TS의 node 계열을 좋아합니다.
+JS/TS와 Node 계열을 좋아합니다.
 
-1. `Front-end` 의 경우 React를 이용하여 제작이 가능하며
+1. `Front-end` 의 경우 React를 사용할 수 있으며
 1. `Back-end` 의 경우 TS, C#, Go을 사용할 수 있으며
-1. `CI/CD` 의 경우 Azure Devops, Jenkins, Github Action으로 pipeline를 구축해 보았으며
-1. `Infra` 의 경우 클라우드는 Azure 기반으로 k8s를 사용한 경험이 있습니다.
-
-작게나마 애자일 조직에서 일한 경험이 있습니다.
+1. `DBMS` 의 경우 Mysql을 사용한 경험이 있으며
+1. `CI/CD` 의 경우 Azure DevOps, Jenkins, Github Action으로 Pipeline를 구축해 보았으며
+1. `Infra` 의 경우 Azure를 주로 사용하였으며 그중 k8s(aks)를 사용한 경험도 있으며
+1. `모니터링/운영` 의 경우 Azure Application Insights으로 DashBoard 및 경고 규칙을 운용해 보았으며
+1. `협업` 의 경우 애자일 조직에서 일한 경험이 있습니다.
 
 |         |                                                                |
 | ------- | -------------------------------------------------------------- |
 | GitHub  | https://github.com/parkgang                                    |
 | Blog    | https://parkgang.github.io, https://velog.io/@ruddms936/series |
-| Contact | ruddms936@naver.com                                            |
+| Contact | <a href="mailto:ruddms936@naver.com">ruddms936@naver.com</a>   |
 
 # Project
+
+## [JavaWeb](https://github.com/Team-Yamu/JavaWeb)
+
+영어실력을 기를 수 있도록 영단어장을 관리하는 서비스이에요! 영어 기사를 요약하는 기능도 있습니다.
 
 ## [modern-tier](https://github.com/parkgang/modern-tier)
 
