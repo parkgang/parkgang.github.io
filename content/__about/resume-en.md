@@ -4,6 +4,11 @@ date: 2019-1-27 16:21:13
 lang: 'en'
 ---
 
+# Deprecated ❌
+
+이력서 관련 내용은 `2022-03-10` 부로 notion으로 이동되어 해당 페이지는 더 이상 유지 보수되지 않습니다.
+[notion](https://parkgang.notion.site/parkgang-eff08b545e934a3798b4e12ebe1829f0) 를 참고해주세요.
+
 # 박경은 (Kyungeun Park)
 
 기술을 이해하고 문제 해결하는 것을 즐기는 개발자입니다.

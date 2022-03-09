@@ -24,7 +24,13 @@ export const Bio = () => (
               />
               <div className="author-name">
                 <span className="author-name-prefix">Written by</span>
-                <Link to={'/about'} className="author-name-content">
+                {/* 이력서 관련 내용은 notion으로 이동 */}
+                <Link
+                  to={
+                    'https://parkgang.notion.site/parkgang-eff08b545e934a3798b4e12ebe1829f0'
+                  }
+                  className="author-name-content"
+                >
                   <span>@{author}</span>
                 </Link>
                 <div className="author-introduction">{introduction}</div>
