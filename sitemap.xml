@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://parkgang.github.io/essay/2021-retrospective/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://parkgang.github.io/essay/belf-project-retrospective/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://parkgang.github.io/azure/how-is-k8s-external-ip-handled-in-azure/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://parkgang.github.io/golang/lets-create-an-http-cache-server-with-golang/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://parkgang.github.io/essay/share-react-boilerplate-with-gin/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://parkgang.github.io/next.js/lets-properly-understand-and-use-the-ssg-of-next.js/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://parkgang.github.io/devops/workflows-with-aks-github-slack-7/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://parkgang.github.io/devops/workflows-with-aks-github-slack-6/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://parkgang.github.io/devops/workflows-with-aks-github-slack-5/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://parkgang.github.io/devops/workflows-with-aks-github-slack-4/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://parkgang.github.io/devops/workflows-with-aks-github-slack-3/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://parkgang.github.io/devops/workflows-with-aks-github-slack-2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://parkgang.github.io/devops/workflows-with-aks-github-slack-1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://parkgang.github.io/next.js/using-recoil-in-next.js/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://parkgang.github.io/essay/2020-retrospective/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://parkgang.github.io/essay/why-start-github-blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://parkgang.github.io/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://parkgang.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+</urlset>
