@@ -2,7 +2,7 @@ module.exports = {
   title: `Parkgang Dev Log`,
   description: `Parkgang의 개발 블로그 입니다.`,
   author: `parkgang`,
-  introduction: `Software Engineer, 시스템 적인 환경을 좋아하는 개발자`,
+  introduction: `Software Engineer, DevOps ❤️, 시스템적인 환경을 좋아하는 개발자`,
   siteUrl: `https://parkgang.github.io/`, // Your blog site url
   social: {
     twitter: `parkgangeun`, // Your Twitter account
