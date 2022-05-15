@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://your-blog.netlify.app/sitemap.xml
-Host: https://your-blog.netlify.app
+Sitemap: https://parkgang.github.io/sitemap.xml
+Host: https://parkgang.github.io
