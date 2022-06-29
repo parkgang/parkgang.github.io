@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://parkgang.github.io/sitemap.xml
-Host: https://parkgang.github.io
