@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[7425],{560:function(a){a.exports=JSON.parse('{"label":"MSA","permalink":"/blog/tags/msa","allTagsPath":"/blog/tags","count":1}')}}]);
