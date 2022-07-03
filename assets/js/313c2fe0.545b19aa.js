@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[9690],{94842:function(a){a.exports=JSON.parse('{"label":"load balancer","permalink":"/blog/tags/load-balancer","allTagsPath":"/blog/tags","count":1}')}}]);
