@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[327],{30538:function(e){e.exports=JSON.parse('{"label":"Blue-Green","permalink":"/blog/tags/blue-green","allTagsPath":"/blog/tags","count":1}')}}]);

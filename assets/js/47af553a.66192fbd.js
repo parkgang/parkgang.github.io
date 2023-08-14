@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[6276],{68454:a=>{a.exports=JSON.parse('{"label":"datagrip","permalink":"/blog/tags/datagrip","allTagsPath":"/blog/tags","count":1}')}}]);
