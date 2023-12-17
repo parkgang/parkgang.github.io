@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[8811],{68732:l=>{l.exports=JSON.parse('{"label":"multi-tenant","permalink":"/blog/tags/multi-tenant","allTagsPath":"/blog/tags","count":1}')}}]);
