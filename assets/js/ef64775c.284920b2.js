@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[1374],{91048:a=>{a.exports=JSON.parse('{"label":"Transaction Isolation Level","permalink":"/blog/tags/transaction-isolation-level","allTagsPath":"/blog/tags","count":1}')}}]);
