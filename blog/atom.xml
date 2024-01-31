@@ -32,7 +32,7 @@
         <category label="컨퍼런스" term="컨퍼런스"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[next.js의 prefetch는 어떻게 동작하는가?]]></title>
+        <title type="html"><![CDATA[Next.js의 prefetch는 어떻게 동작하는가?]]></title>
         <id>/2023/07/15/how-nextjs-prefetch-work</id>
         <link href="https://parkgang.github.io/blog/2023/07/15/how-nextjs-prefetch-work"/>
         <updated>2023-07-15T11:00:00.000Z</updated>
@@ -92,7 +92,7 @@
         <category label="UX" term="UX"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Github Blog에 Google Analytics 적용 튜토리얼]]></title>
+        <title type="html"><![CDATA[GitHub Blog에 Google Analytics 적용 튜토리얼]]></title>
         <id>/2022/11/13/tutorial-on-apply-google-analytics-to-github-blog</id>
         <link href="https://parkgang.github.io/blog/2022/11/13/tutorial-on-apply-google-analytics-to-github-blog"/>
         <updated>2022-11-12T22:34:00.000Z</updated>
@@ -113,7 +113,7 @@
         <category label="SEO" term="SEO"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Private Repo에서 Github Blog 만들기: Github Actions 활용]]></title>
+        <title type="html"><![CDATA[Private Repo에서 GitHub Blog 만들기: GitHub Actions 활용]]></title>
         <id>/2022/09/25/private-repo-github-blog-with-github-actions</id>
         <link href="https://parkgang.github.io/blog/2022/09/25/private-repo-github-blog-with-github-actions"/>
         <updated>2022-09-25T11:00:00.000Z</updated>
@@ -191,7 +191,7 @@
         <category label="cache" term="cache"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[gin과 함께하는 react boilerplate를 공유합니다]]></title>
+        <title type="html"><![CDATA[Gin과 함께하는 React boilerplate를 공유합니다]]></title>
         <id>/2021/09/13/share-react-boilerplate-with-gin</id>
         <link href="https://parkgang.github.io/blog/2021/09/13/share-react-boilerplate-with-gin"/>
         <updated>2021-09-13T04:09:19.000Z</updated>
@@ -201,7 +201,7 @@
         <category label="boilerplate" term="boilerplate"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[next.js의 SSG 제대로 이해하고 사용하기]]></title>
+        <title type="html"><![CDATA[Next.js의 SSG 제대로 이해하고 사용하기]]></title>
         <id>/2021/09/07/lets-properly-understand-and-use-the-ssg-of-nextjs</id>
         <link href="https://parkgang.github.io/blog/2021/09/07/lets-properly-understand-and-use-the-ssg-of-nextjs"/>
         <updated>2021-09-06T15:09:55.000Z</updated>
@@ -217,7 +217,7 @@ static html을 클라우드와 같은 static web host에 push하고 사용할 �
         <category label="SSG" term="SSG"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[next.js에서 recoil 사용하기]]></title>
+        <title type="html"><![CDATA[Next.js에서 Recoil 사용하기]]></title>
         <id>/2021/05/06/using-recoil-in-nextjs</id>
         <link href="https://parkgang.github.io/blog/2021/05/06/using-recoil-in-nextjs"/>
         <updated>2021-05-05T18:06:21.000Z</updated>
