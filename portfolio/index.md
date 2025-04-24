@@ -421,7 +421,7 @@ section code {
 - [서비스 사용 매뉴얼](https://parkgang.notion.site/36f01d56dff643dfa1db264e33f18d7d) 을 살펴볼 수 있습니다.
 - 관련된 글이에요.
   - [MSA로 개발해 본 Belf 프로젝트 회고](/blog/2021/12/26/belf-project-retrospective/)
-  - [aks, github, slack으로 워크플로우 구축하기](/series/workflows-with-aks-github-slack/)
+  - [aks, GitHub, slack으로 워크플로우 구축하기](/series/workflows-with-aks-github-slack/)
   - [k8s의 EXTERNAL-IP는 Azure에서 어떻게 처리될까?](/blog/2021/12/06/how-is-k8s-external-ip-handled-in-azure/)
 
 ---
