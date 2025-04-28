@@ -31,6 +31,18 @@
             <category>Vim</category>
         </item>
         <item>
+            <title><![CDATA[MS가 만들어준 어떤 에디터에서도 통하는 언어 기능]]></title>
+            <link>https://parkgang.github.io/blog/2025/02/01/editor-universal-language-features-ms</link>
+            <guid>/2025/02/01/editor-universal-language-features-ms</guid>
+            <pubDate>Sat, 01 Feb 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[VSCode를 개발하면서 LSP, DAP 등 별의별 것 다 생겼구나]]></description>
+            <content:encoded><![CDATA[<p>VSCode를 개발하면서 LSP, DAP 등 별의별 것 다 생겼구나</p><p>그냥 사용자 입장이면 모르고 지나갈 수 있지만, 여러 개발 환경을 구축하며 깊게 파고들다 보니 많은 것을 경험하게 되었다.</p><p>특히, <code>PHP</code> 디버깅을 위해서 바닥부터 구현한 <code>Xdebug</code> , <code>Neovim</code> 에서 여러 언어 기능을 활성화하면서 많이 배웠다.</p><p>사실상 <code>VSCode</code> 가 되면 다른 IDE(더 나아가 Vim)도 잘 된다는 생각이 들었다.</p><p>이렇게 보니까 <code>JetBrains</code> 가 독자적으로 얼마나 대단한가 생각이 들었다...</p><p>참조, 에러 등 기본적인 언어 기능에 비해 더 고급 기능이라고 볼 수 있는 <code>리팩토링</code> , <code>분석</code> 기능은 모든 언어가 손쉽게 지원하지 않는다는 것을 알았고 지원하더라도 이걸 잘 해주는 도구가 <code>JetBrains IDE</code> , <code>Visual Studio</code> 같은 것이고 그렇기에 유료 툴이 의미가 있구나 느꼈다.</p><p>또 MS에서 <code>LSIF(Language Server Index Format)</code> 만드는 것을 보고 놀랐다. 해당 기능은 코드 분석을 사전에 만들어서 사용하는 것인데 웹에서 코드 볼 때 유용하게 사용될 수 있다.</p><p>위 기능을 만들며 웹에서 언어 기능을 통해 손쉽게 코드리뷰 할 수 있다는 내용을 보았다. 다들 PR을 위해 Checkout을 귀찮아하는구나 공감도 하고 그걸 바꾸려고 이런 프로토콜도 제시하고 하다니… 사실 GitHub, Azure DevOps 사용하면서 웹에서 어느 정도 언어 기능 지원될 때 그냥 그렇구나 하고 넘겼는데 이런 기술을 보고 나니까 대단하더라…</p><p>그냥 사용만 했다면 모르고 지나쳤을 내용인데 바닥부터 개발 환경을 만지다 보니 이런 것을 배우게 되는구나.<br>
+<!-- -->MS 참 많은 것을 바꿔주었구나.</p>]]></content:encoded>
+            <category>MS</category>
+            <category>개발 환경</category>
+            <category>Tool</category>
+        </item>
+        <item>
             <title><![CDATA[요즘 핫한 생산성 앱은 왜 macOS First일까?]]></title>
             <link>https://parkgang.github.io/blog/2025/01/29/productivity-apps-macos-first</link>
             <guid>/2025/01/29/productivity-apps-macos-first</guid>
