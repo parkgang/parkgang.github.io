@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[7102],{81463:e=>{e.exports=JSON.parse('{"label":"Neovim Config Framework","permalink":"/blog/tags/neovim-config-framework","allTagsPath":"/blog/tags","count":1}')}}]);

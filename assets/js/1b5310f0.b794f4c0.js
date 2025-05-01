@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[5667],{62462:e=>{e.exports=JSON.parse('{"label":"Neovim","permalink":"/blog/tags/neovim","allTagsPath":"/blog/tags","count":1}')}}]);
